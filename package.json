@@ -1,7 +1,7 @@
 {
-  "name": "uicomponents",
+  "name": "8om-ui-components",
   "version": "1.0.0",
-  "description": "uicomponents React component",
+  "description": "UI Components for 8om Enterprise Applications",
   "main": "lib/index.js",
   "module": "es/index.js",
   "files": [
@@ -55,7 +55,7 @@
     "react-dom": "^16.2.0"
   },
   "author": "",
-  "homepage": "",
+  "homepage": "https://8om.io",
   "license": "MIT",
   "repository": "",
   "keywords": [
