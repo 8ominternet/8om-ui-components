@@ -1,5 +1,5 @@
 {
-  "name": "@8om/ui-components",
+  "name": "@8om.io/ui-components",
   "version": "1.0.0",
   "description": "UI Components for 8om Enterprise Applications",
   "main": "lib/index.js",
