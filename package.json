@@ -1,6 +1,6 @@
 {
   "name": "@8om.io/ui-components",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "UI Components for 8om Enterprise Applications",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -56,7 +56,7 @@
     "react-dom": "^16.2.0"
   },
   "author": "",
-  "homepage": "https://8om.io",
+  "homepage": "https://github.com/harshmaur/8om-ui-components",
   "license": "MIT",
   "repository": "",
   "keywords": [
