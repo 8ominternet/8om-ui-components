@@ -1,6 +1,6 @@
 {
   "name": "@8om.io/ui-components",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "UI Components for 8om Enterprise Applications",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -36,6 +36,7 @@
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.3.15",
+    "@storybook/addon-knobs": "^3.3.15",
     "@storybook/addon-links": "^3.3.15",
     "@storybook/addon-notes": "^3.3.15",
     "@storybook/addons": "^3.3.15",
