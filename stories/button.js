@@ -1,23 +1,26 @@
 import React from 'react'
 
-import { storiesOf } from '@storybook/react'
+import { setAddon, storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
-import { WithNotes } from '@storybook/addon-notes'
-import { select, withKnobs } from '@storybook/addon-knobs/react'
-
+import { select, boolean, text, withKnobs } from '@storybook/addon-knobs/react'
+import JSXAddon from 'storybook-addon-jsx'
 import Button from '../src/button'
 
 const stories = storiesOf('Button', module)
 stories.addDecorator(withKnobs)
+setAddon(JSXAddon)
 
 stories
-  .add('normal state', () => (
-    <WithNotes notes="This is the normal state of the buttons">
-      <Button onClick={action('clicked')} type="primary" />
-    </WithNotes>
-  ))
-  .add('with message', () => (
-    <WithNotes notes={`Using prop "message" to change the button text`}>
-      <Button onClick={action('clicked')} type={select('message', { red: 'Red', green: 'Green' }, 'red')} />
-    </WithNotes>
+  .addWithJSX('Default', () => <Button />)
+  .addWithJSX('Medium', () => <Button size="medium" />)
+  .addWithJSX('Large', () => <Button size="large" />)
+  .addWithJSX('Disabled', () => <Button disabled />)
+  .addWithJSX('With Label', () => <Button label="Next" />)
+  .addWithJSX('Loading', () => <Button isLoading />)
+  .addWithJSX('Playground', () => (
+    <Button
+      label={text('label', 'Button')}
+      size={select('size', { small: 'small', medium: 'medium', large: 'large' }, 'small')}
+      isLoading={boolean('isLoading', false)}
+    />
   ))
