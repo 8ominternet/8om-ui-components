@@ -1,9 +1,9 @@
 import React from 'react'
 
 import { setAddon, storiesOf } from '@storybook/react'
-import { boolean, text, object, withKnobs } from '@storybook/addon-knobs/react'
+import { boolean, text, object, color, withKnobs } from '@storybook/addon-knobs/react'
 import JSXAddon from 'storybook-addon-jsx'
-import Input from '../src/Input'
+import { Input } from '../src/Input'
 
 const stories = storiesOf('Input', module)
 stories.addDecorator(withKnobs)
@@ -20,7 +20,7 @@ stories
     <Input
       label={text('label', 'INPUT FIELD')}
       placeholder={text('placeholder', 'Text Field')}
-      placeholderColor={text('placeholderColor', '#4da1ff')}
+      placeholderColor={color('placeholderColor', '#4da1ff')}
       disabled={boolean('disabled', false)}
       readOnly={boolean('readOnly', false)}
       labelStyle={object('labelStyle', { color: '#323c47' })}
