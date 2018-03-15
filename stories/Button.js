@@ -1,10 +1,9 @@
 import React from 'react'
 
 import { setAddon, storiesOf } from '@storybook/react'
-import { action } from '@storybook/addon-actions'
 import { select, boolean, text, withKnobs } from '@storybook/addon-knobs/react'
 import JSXAddon from 'storybook-addon-jsx'
-import Button from '../src/button'
+import Button from '../src/Button'
 
 const stories = storiesOf('Button', module)
 stories.addDecorator(withKnobs)
