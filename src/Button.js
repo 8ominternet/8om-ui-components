@@ -15,10 +15,9 @@ const ButtonWrapper = styled.button`
     box-shadow 0.15s ease-in-out;
   outline: none;
   cursor: pointer;
-  margin: 5px;
   height: 38px;
-  background-color: #4da1ff;
-  color: #fff;
+  background-color: ${props => (props.backgroundColor ? props.backgroundColor : '#4da1ff')};
+  color: ${props => (props.color ? props.color : '#ffffff')};
   border: none;
   box-shadow: 0px 2px 8px -2px rgba(0, 0, 0, 0.4);
   width: ${props => {
@@ -43,7 +42,8 @@ const ButtonWrapper = styled.button`
   }};
 
   &:hover {
-    background-color: #3c95f9;
+    background-color: ${props => (props.backgroundColorOnHover ? props.backgroundColorOnHover : '#3c95f9')};
+    color: ${props => (props.colorOnHover ? props.colorOnHover : '#ffffff')};
   }
   &:active {
     box-shadow: none;
@@ -53,10 +53,9 @@ const ButtonWrapper = styled.button`
     props.disabled &&
     `
     background-color:#c4c4c3;
-    border-color:#c4c4c3;
     &:hover{
       background-color:#c4c4c3;
-      border-color:#c4c4c3;
+
     }
   `};
   ${props =>

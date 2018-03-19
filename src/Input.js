@@ -1,13 +1,24 @@
 import React from 'react'
-import styled, { keyframes } from 'styled-components'
-
+import styled from 'styled-components'
+import { Icon } from './Icon'
 const InputWrapper = styled.div`
   display: inline-block;
+  position: relative;
 `
+const Icons = styled.div`
+  position: absolute;
+  right: 10px;
+  bottom: 12px;
+  cursor: pointer;
+  opacity: 0.4;
+  display: flex;
+  align-items: center;
+`
+
 const StyledInput = styled.input`
   outline: none;
   border: 1px solid #e9eff4;
-  height: 45px;
+  height: 38px;
   width: 400px;
   border-radius: 4px;
   padding: 9px 12px;
@@ -22,12 +33,26 @@ const StyledInput = styled.input`
   &:disabled {
     background-color: #f4f8f9;
   }
+  &:valid {
+    & + div {
+      opacity: 1;
+    }
+  }
+
   ${props =>
     props.readOnly &&
     `
   background-color: #f4f8f9;
   
-  `} /* Placeholder color */
+  `};
+  ${props =>
+    props.passwordToggle &&
+    `
+  padding-right:35px;
+  
+  `};
+
+  /* Placeholder color */
   &::-webkit-input-placeholder {
     /* Chrome/Opera/Safari */
     color: ${props => (props.placeholderColor ? props.placeholderColor : '#9b9b9b')};
@@ -52,13 +77,29 @@ const Label = styled.p`
   letter-spacing: 0.8px;
   font-family: sans-serif;
 `
+
 class Input extends React.Component {
+  state = { showPassword: false }
   render() {
-    const { labelStyle, placeholderColor, label, ...props } = this.props
+    const { labelStyle, placeholderColor, label, passwordToggle = true, type, ...props } = this.props
+    const { showPassword } = this.state
     return (
       <InputWrapper>
         {label && <Label style={labelStyle && labelStyle}>{label}</Label>}
-        <StyledInput {...props} placeholderColor={placeholderColor && placeholderColor} />
+        <StyledInput
+          passwordToggle={passwordToggle}
+          placeholderColor={placeholderColor && placeholderColor}
+          type={type ? (showPassword ? 'text' : type) : 'text'}
+          required
+          {...props}
+        />
+        {type === 'password' && passwordToggle ? (
+          <Icons onClick={() => this.setState({ showPassword: !showPassword })}>
+            <Icon icon={showPassword ? 'passwordHide' : 'passwordShow'} />
+          </Icons>
+        ) : (
+          ''
+        )}
       </InputWrapper>
     )
   }
