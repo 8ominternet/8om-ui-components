@@ -6,6 +6,9 @@ function loadStories() {
   require('../stories/Input')
   require('../stories/Menu')
   require('../stories/Icon')
+  require('../stories/SwitchToggle')
+  require('../stories/SelectBox')
+
   // You can require as many stories as you need.
 }
 setAddon(JSXAddon)
