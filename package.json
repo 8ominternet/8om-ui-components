@@ -1,6 +1,6 @@
 {
   "name": "@8om.io/ui-components",
-  "version": "1.0.12",
+  "version": "1.0.15",
   "description": "UI Components for 8om Enterprise Applications",
   "main": "lib/index.js",
   "module": "es/index.js",
