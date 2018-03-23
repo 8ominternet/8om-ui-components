@@ -38,7 +38,9 @@ const StyledInput = styled.input`
       opacity: 1;
     }
   }
-
+  &:required {
+    box-shadow: none;
+  }
   ${props =>
     props.readOnly &&
     `

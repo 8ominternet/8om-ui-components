@@ -19,7 +19,7 @@ const ItemWrapper = styled.a`
       width: 10px;
       height: 100%;
       position: absolute;
-      box-shadow: none;
+      box-shadow: none !important;
       left: 0px;
       background-color: ${props => (props.theme.themeColor ? props.theme.themeColor : '#4192ec')};
       border-radius: 0 8px 8px 0;
@@ -35,6 +35,7 @@ const ItemWrapper = styled.a`
         `};
     }
   }
+
   ${props =>
     props.active &&
     `
@@ -46,7 +47,7 @@ const ItemWrapper = styled.a`
     left: 0px;
     background-color: 'yellow';
     border-radius: 0 8px 8px 0;
-    box-shadow: 2px 1px 11px 0px rgba(1,172,253,1);
+    box-shadow: 2px 1px 11px 0px rgba(1,172,253,1) !important;
     z-index: 9;
   }
   `};
@@ -56,8 +57,9 @@ const ItemWrapper = styled.a`
     `
     &:after {
       background-color:${props.theme.themeColor} ;
-    box-shadow: 2px 1px 11px 0px ${props.theme.themeColor};
+    box-shadow: 2px 1px 11px 0px ${props.theme.themeColor} !important;
   `};
+
   ${props =>
     props.theme.verticalAlign &&
     `
@@ -86,7 +88,6 @@ const ItemName = styled.p`
 
 const MenuItem = ({ iconName, theme, children, ...props }) => (
   <ItemWrapper {...props}>
-    {console.log(theme)}
     <IconWrapper>
       <Icon icon={iconName ? iconName : 'overview'} color={theme.themeColor ? theme.themeColor : '#4da1ff'} />
     </IconWrapper>
