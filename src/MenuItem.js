@@ -88,7 +88,6 @@ const ItemName = styled.p`
 
 const MenuItem = ({ iconName, theme, children, ...props }) => (
   <ItemWrapper {...props}>
-    {console.log(theme)}
     <IconWrapper>
       <Icon icon={iconName ? iconName : 'overview'} color={theme.themeColor ? theme.themeColor : '#4da1ff'} />
     </IconWrapper>

@@ -5,7 +5,7 @@ import 'react-select/dist/react-select.css'
 const SelectWrapper = styled.div`
   display: inline-block;
   position: relative;
-  width: 400px;
+  width: ${props => (props.width ? props.width : '400px')};
 
   & .Select-control {
     height: 38px;
@@ -79,9 +79,9 @@ const Label = styled.p`
 
 class SelectBox extends React.Component {
   render() {
-    const { labelStyle, placeholderColor, label, ...props } = this.props
+    const { labelStyle, placeholderColor, width, label, ...props } = this.props
     return (
-      <SelectWrapper>
+      <SelectWrapper width={width}>
         {label && <Label style={labelStyle && labelStyle}>{label}</Label>}
         <Select clearable={false} {...props} />
       </SelectWrapper>

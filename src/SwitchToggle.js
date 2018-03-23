@@ -91,7 +91,7 @@ class SwitchToggle extends Component {
       <Label>
         <CheckedBox
           activeBackgroundColor={activeBackgroundColor}
-          onChange={() => onChange && onChange(this.state.checked)}
+          onChange={onChange ? () => onChange(this.state.checked) : () => null}
           type="checkbox"
           defaultChecked={this.state.checked}
         />

@@ -6,8 +6,10 @@ function loadStories() {
   require('../stories/Input')
   require('../stories/Menu')
   require('../stories/Icon')
+  require('../stories/Radio')
   require('../stories/SwitchToggle')
   require('../stories/SelectBox')
+  require('../stories/Search')
 
   // You can require as many stories as you need.
 }
