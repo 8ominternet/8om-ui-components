@@ -3,6 +3,8 @@ import JSXAddon from 'storybook-addon-jsx'
 
 function loadStories() {
   require('../stories/Button')
+  require('../stories/Card')
+  require('../stories/Dropdown')
   require('../stories/Input')
   require('../stories/Menu')
   require('../stories/Icon')

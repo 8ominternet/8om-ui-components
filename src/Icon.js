@@ -326,68 +326,276 @@ class Icon extends React.Component {
           </svg>
         )
       },
-      delete: () => {
+      leftArrow: () => {
+        return (
+          <svg
+            height={this.props.height ? this.props.height : 24}
+            width={this.props.width ? this.props.width : 24}
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              opacity="0.8"
+              fillRule="evenodd"
+              clipRule="evenodd"
+              fill={this.props.color ? this.props.color : '#757575'}
+              d="M15.264,7.424L10.504,12l4.76,4.576
+            c0.329,0.316,0.34,0.84,0.023,1.17c-0.317,0.329-0.841,0.34-1.171,0.022l-5.381-5.172C8.573,12.44,8.482,12.225,8.482,12
+            s0.091-0.44,0.253-0.597l5.381-5.173C14.277,6.076,14.483,6,14.69,6c0.217,0,0.434,0.085,0.597,0.254
+            C15.604,6.583,15.593,7.107,15.264,7.424z"
+            />
+          </svg>
+        )
+      },
+      rightArrow: () => {
+        return (
+          <svg
+            height={this.props.height ? this.props.height : 24}
+            width={this.props.width ? this.props.width : 24}
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              opacity="0.8"
+              fillRule="evenodd"
+              clipRule="evenodd"
+              fill={this.props.color ? this.props.color : '#757575'}
+              d="M8.736,16.576L13.496,12l-4.76-4.576
+            c-0.329-0.316-0.34-0.84-0.023-1.17s0.841-0.34,1.17-0.023l5.381,5.172c0.162,0.156,0.253,0.372,0.253,0.597
+            s-0.091,0.44-0.253,0.597L9.884,17.77C9.723,17.924,9.517,18,9.31,18c-0.217,0-0.434-0.085-0.597-0.254
+            C8.396,17.417,8.407,16.893,8.736,16.576z"
+            />
+          </svg>
+        )
+      },
+      upArrow: () => {
+        return (
+          <svg
+            height={this.props.height ? this.props.height : 24}
+            width={this.props.width ? this.props.width : 24}
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <g>
+              <g>
+                <defs>
+                  <path
+                    id="SVGID_1_"
+                    d="M15.432,14.446c0.236,0.247,0.63,0.255,0.878,0.018c0.126-0.122,0.189-0.284,0.189-0.447
+                  c0-0.154-0.058-0.311-0.173-0.431l-3.879-4.034C12.33,9.431,12.169,9.363,12,9.363c-0.168,0-0.331,0.068-0.447,0.189
+                  l-3.879,4.034c-0.237,0.247-0.229,0.641,0.017,0.878c0.248,0.237,0.641,0.229,0.879-0.018l3.43-3.569L15.432,14.446z"
+                  />
+                </defs>
+                <clipPath id="SVGID_2_">
+                  <use xlinkHref="#SVGID_1_" overflow="visible" />
+                </clipPath>
+                <rect
+                  x="2.499"
+                  y="4.363"
+                  clip-path="url(#SVGID_2_)"
+                  fill={this.props.color ? this.props.color : '#808FA3'}
+                  width="19"
+                  height="15.275"
+                />
+              </g>
+            </g>
+            <path
+              fill="none"
+              stroke={this.props.color ? this.props.color : '#808FA3'}
+              strokeWidth="0.3"
+              strokeMiterlimit="10"
+              d="M15.432,14.446
+            c0.236,0.247,0.63,0.255,0.878,0.018c0.126-0.122,0.189-0.284,0.189-0.447c0-0.154-0.058-0.311-0.173-0.431l-3.879-4.034
+            C12.33,9.431,12.169,9.363,12,9.363c-0.168,0-0.331,0.068-0.447,0.189l-3.879,4.034c-0.237,0.247-0.229,0.641,0.017,0.878
+            c0.248,0.237,0.641,0.229,0.879-0.018l3.43-3.569L15.432,14.446z"
+            />
+          </svg>
+        )
+      },
+      upload: () => {
+        return (
+          <svg
+            height={this.props.height ? this.props.height : 24}
+            width={this.props.width ? this.props.width : 24}
+            viewBox="0 0 24 24"
+            fill={this.props.color ? this.props.color : '#808FA3'}
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              fillRule="evenodd"
+              clipRule="evenodd"
+              d="M11.43,11.696c0.002-0.002,0.003-0.007,0.006-0.01
+            c0.175-0.176,0.403-0.262,0.632-0.262c0.228,0,0.457,0.086,0.631,0.262c0.002,0.002,0.002,0.006,0.004,0.008l2.458,2.467
+            c0.348,0.35,0.348,0.915,0,1.264c-0.174,0.175-0.402,0.263-0.63,0.263c-0.229,0-0.455-0.088-0.63-0.263l-0.941-0.945v5.627
+            C12.961,20.6,12.562,21,12.07,21c-0.492,0-0.891-0.4-0.891-0.894v-5.631l-0.945,0.949c-0.173,0.175-0.401,0.263-0.629,0.263
+            S9.148,15.6,8.975,15.425c-0.349-0.349-0.349-0.914,0-1.264L11.43,11.696z M17.789,18.153c-0.468,0.149-0.968-0.113-1.116-0.584
+            c-0.147-0.471,0.113-0.973,0.583-1.121c2.293-0.725,3.457-2.584,3.457-5.527c0-3.382-2.74-6.133-6.11-6.133
+            c-2.929,0-5.45,2.095-5.998,4.981l-0.182,0.96l-0.937-0.268c-0.301-0.086-0.604-0.129-0.902-0.129c-1.818,0-3.297,1.484-3.297,3.308
+            c0,1.825,1.479,3.31,3.297,3.31l0.182-0.013c0.498-0.02,0.911,0.352,0.937,0.845c0.026,0.493-0.351,0.914-0.842,0.94l-0.06,0.004
+            c-0.071,0.006-0.143,0.011-0.216,0.011c-2.8,0-5.078-2.286-5.078-5.097c0-2.81,2.278-5.096,5.078-5.096
+            c0.162,0,0.324,0.008,0.486,0.024C8.081,5.295,11.12,3,14.603,3c4.352,0,7.891,3.553,7.891,7.921
+            C22.493,14.681,20.867,17.182,17.789,18.153z"
+            />
+          </svg>
+        )
+      },
+      copy: () => {
+        return (
+          <svg
+            height={this.props.height ? this.props.height : 24}
+            width={this.props.width ? this.props.width : 24}
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              fill={this.props.color ? this.props.color : '#4DA1FF'}
+              d="M17.925,8.389L17.925,8.389v10.387c0,0.249-0.205,0.451-0.457,0.451H6.532c-0.251,0-0.457-0.201-0.457-0.451
+            V5.225c0-0.249,0.204-0.452,0.457-0.452h7.747v0.001l0,0l3.645,3.612h0.003L17.925,8.389L17.925,8.389z M13.366,8.386V5.675H7.442
+            c-0.25,0-0.455,0.204-0.455,0.454v11.742c0,0.252,0.203,0.453,0.455,0.453h9.113c0.252,0,0.456-0.201,0.456-0.453v-8.58h-2.733
+            h-0.912V8.386z M14.278,5.886v2.5h2.522L14.278,5.886z"
+            />
+          </svg>
+        )
+      },
+      calendar: () => {
+        return (
+          <svg
+            height={this.props.height ? this.props.height : 24}
+            width={this.props.width ? this.props.width : 24}
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              fillRule="evenodd"
+              clipRule="evenodd"
+              fill={this.props.color ? this.props.color : '#4DA1FF'}
+              d="M17.54,18.893H6.458c-0.471,0-0.853-0.386-0.853-0.861V9.416V8.554
+            V6.83c0-0.475,0.382-0.861,0.853-0.861h2.557V5.107h0.853v0.861h4.262V5.107h0.853v0.861h2.983c0.471,0,0.427,0.387,0.427,0.861
+            v1.724v0.862v8.615C18.393,18.507,18.011,18.893,17.54,18.893z M17.54,7.262c0-0.238-0.19-0.432-0.426-0.432h-2.132v0.862H14.13
+            V6.83H9.868v0.862H9.016V6.83H6.885c-0.235,0-0.426,0.193-0.426,0.432v1.292H17.54V7.262z M17.54,9.416H6.458V17.6
+            c0,0.238,0.191,0.432,0.426,0.432h10.229c0.235,0,0.426-0.193,0.426-0.432V9.416z M14.13,17.169h2.558v-2.585H14.13V17.169z
+             M14.982,16.308h0.853v-0.861h-0.853V16.308z M14.13,13.723h2.558v-2.584H14.13V13.723z M14.982,12.861h0.853V12h-0.853V12.861z
+             M10.721,17.169h2.558v-2.585h-2.558V17.169z M11.573,16.308h0.853v-0.861h-0.853V16.308z M10.721,13.723h2.558v-2.584h-2.558
+            V13.723z M11.573,12.861h0.853V12h-0.853V12.861z M7.311,17.169h2.558v-2.585H7.311V17.169z M8.164,16.308h0.852v-0.861H8.164
+            V16.308z M7.311,13.723h2.558v-2.584H7.311V13.723z M8.164,12.861h0.852V12H8.164V12.861z"
+            />
+          </svg>
+        )
+      },
+      clone: () => {
         return (
           <svg
             height={this.props.height ? this.props.height : 16}
-            width={this.props.width ? this.props.width : 14}
-            viewBox="1.542 0 13.875 16"
+            width={this.props.width ? this.props.width : 16}
+            viewBox="0 0 12 12"
             xmlns="http://www.w3.org/2000/svg">
-            <g id="Overview">
-              <g id="Project-Selected_2" transform="translate(-325.000000, -992.000000)">
-                <g id="Group" transform="translate(326.000000, 992.000000)">
-                  <path
-                    id="Shape"
-                    fill="none"
-                    stroke={this.props.color ? this.props.color : '#323C47'}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M1.147,2.643h12.664"
-                  />
-                  <polyline
-                    id="Shape_1_"
-                    fill="none"
-                    stroke={this.props.color ? this.props.color : '#323C47'}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    points="2.448,2.721 
-                  3.798,15.414 11.213,15.414 12.354,2.681 			"
-                  />
-                  <path
-                    id="Shape_2_"
-                    fill="none"
-                    stroke={this.props.color ? this.props.color : '#323C47'}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M5.369,5.24l0.297,7.514"
-                  />
-                  <path
-                    id="Shape_3_"
-                    fill="none"
-                    stroke={this.props.color ? this.props.color : '#323C47'}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M7.479,5.186v7.47"
-                  />
-                  <path
-                    id="Shape_4_"
-                    fill="none"
-                    stroke={this.props.color ? this.props.color : '#323C47'}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M9.616,5.299l-0.243,7.497"
-                  />
-                  <polyline
-                    id="Shape_5_"
-                    fill="none"
-                    stroke={this.props.color ? this.props.color : '#323C47'}
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    points="5.369,2.372 
-                  5.369,0.586 9.266,0.586 9.266,2.48 			"
-                  />
-                </g>
+            <g>
+              <path
+                fill="none"
+                stroke={this.props.color ? this.props.color : '#4DA1FF'}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeMiterlimit="10"
+                d="M-27.732,2.896"
+              />
+            </g>
+            <g>
+              <rect
+                x="3.296"
+                y="4.621"
+                fill="none"
+                stroke={this.props.color ? this.props.color : '#4DA1FF'}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeMiterlimit="10"
+                width="8.003"
+                height="5.354"
+              />
+              <polyline
+                fill="none"
+                stroke={this.props.color ? this.props.color : '#4DA1FF'}
+                strokeLinecap="square"
+                strokeLinejoin="round"
+                strokeMiterlimit="10"
+                points="
+              1.689,7.378 0.7,7.378 0.7,2.025 8.704,2.025 8.704,3.041 	"
+              />
+            </g>
+          </svg>
+        )
+      },
+      dotsHorizontal: () => {
+        return (
+          <svg
+            height={this.props.height ? this.props.height : 24}
+            width={this.props.width ? this.props.width : 24}
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              opacity="0.73"
+              fillRule="evenodd"
+              clipRule="evenodd"
+              fill={this.props.color ? this.props.color : '#D0D7DD'}
+              d="M3.032,14.5C1.633,14.5,0.5,13.381,0.5,12
+            s1.133-2.5,2.532-2.5c1.397,0,2.532,1.119,2.532,2.5S4.43,14.5,3.032,14.5z M12,14.5c-1.39,0-2.516-1.119-2.516-2.5
+            S10.61,9.5,12,9.5s2.516,1.119,2.516,2.5S13.39,14.5,12,14.5z M20.968,14.5c-1.397,0-2.532-1.119-2.532-2.5s1.135-2.5,2.532-2.5
+            c1.399,0,2.532,1.119,2.532,2.5S22.367,14.5,20.968,14.5z"
+            />
+          </svg>
+        )
+      },
+      delete: () => {
+        return (
+          <svg
+            height={this.props.height ? this.props.height : 14}
+            width={this.props.width ? this.props.width : 14}
+            viewBox="0 0 12 12"
+            xmlns="http://www.w3.org/2000/svg">
+            <g>
+              <polyline
+                fill="none"
+                stroke={this.props.color ? this.props.color : '#4192ec'}
+                strokeLinejoin="round"
+                strokeMiterlimit="10"
+                points="2.591,2.927 2.591,11.107 
+              9.408,11.107 9.408,2.91 	"
+              />
+              <g>
+                <line
+                  fill="none"
+                  stroke={this.props.color ? this.props.color : '#4192ec'}
+                  strokeLinecap="round"
+                  strokeMiterlimit="10"
+                  x1="4.938"
+                  y1="5.109"
+                  x2="4.938"
+                  y2="8.671"
+                />
+                <line
+                  fill="none"
+                  stroke={this.props.color ? this.props.color : '#4192ec'}
+                  strokeLinecap="round"
+                  strokeMiterlimit="10"
+                  x1="7.062"
+                  y1="5.083"
+                  x2="7.062"
+                  y2="8.646"
+                />
               </g>
+
+              <line
+                fill="none"
+                stroke={this.props.color ? this.props.color : '#4192ec'}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeMiterlimit="10"
+                x1="0.601"
+                y1="2.896"
+                x2="11.4"
+                y2="2.896"
+              />
+              <polyline
+                fill="none"
+                stroke={this.props.color ? this.props.color : '#4192ec'}
+                strokeLinejoin="round"
+                strokeMiterlimit="10"
+                points="3.588,2.515 3.588,0.892 
+              8.411,0.892 8.411,2.515 	"
+              />
             </g>
           </svg>
         )

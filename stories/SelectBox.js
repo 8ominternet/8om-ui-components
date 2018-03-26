@@ -41,7 +41,7 @@ stories.add('Example', () => (
     <SelectBox width="600px" />
     <Code>{`<SelectBox label="FIRST NAME" />`}</Code>
     <p>
-      <strong>Note:</strong> See more options and method{' '}
+      <strong>Note:</strong> See more Options and Methods{' '}
       <a href="https://github.com/JedWatson/react-select" target="_blank">
         Click Here
       </a>

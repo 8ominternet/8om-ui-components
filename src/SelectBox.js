@@ -51,7 +51,7 @@ const SelectWrapper = styled.div`
   }
   & .Select-arrow-zone {
     background: #f4f7f9;
-    padding: 0px 18px;
+    padding: 0px 18px !important;
     border-left: 1px solid #e9eff4;
   }
   & .Select.is-open > .Select-control .Select-arrow-zone,
