@@ -91,6 +91,9 @@ stories.add('Example', () => (
         <Icon icon={'downArrow'} /> downArrow
       </p>
       <p>
+        <Icon icon={'upArrow'} /> upArrow
+      </p>
+      <p>
         <Icon icon={'delete'} /> delete
       </p>
       <p>
@@ -98,6 +101,27 @@ stories.add('Example', () => (
       </p>
       <p>
         <Icon icon={'google'} /> google
+      </p>
+      <p>
+        <Icon icon={'calendar'} /> calendar
+      </p>
+      <p>
+        <Icon icon={'clone'} /> clone
+      </p>
+      <p>
+        <Icon icon={'dotsHorizontal'} /> dotsHorizontal
+      </p>
+      <p>
+        <Icon icon={'leftArrow'} /> leftArrow
+      </p>
+      <p>
+        <Icon icon={'rightArrow'} /> rightArrow
+      </p>
+      <p>
+        <Icon icon={'upload'} /> upload
+      </p>
+      <p>
+        <Icon icon={'copy'} /> copy
       </p>
     </IconGroup>
   </Div>

@@ -19,7 +19,7 @@ const ItemWrapper = styled.a`
       width: 10px;
       height: 100%;
       position: absolute;
-      box-shadow: none !important;
+      box-shadow: ${props => (props.active ? ' 2px 1px 11px 0px rgba(1,172,253,1)' : 'none')} !important;
       left: 0px;
       background-color: ${props => (props.theme.themeColor ? props.theme.themeColor : '#4192ec')};
       border-radius: 0 8px 8px 0;
@@ -47,7 +47,7 @@ const ItemWrapper = styled.a`
     left: 0px;
     background-color: 'yellow';
     border-radius: 0 8px 8px 0;
-    box-shadow: 2px 1px 11px 0px rgba(1,172,253,1) !important;
+    box-shadow: 2px 1px 11px 0px rgba(1,172,253,1);
     z-index: 9;
   }
   `};
