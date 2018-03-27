@@ -25,7 +25,7 @@ const StyledInput = styled.input`
   font-size: 13px;
   letter-spacing: 0.2px;
   box-sizing: border-box;
-  color: #9b9b9b;
+  color: #323c47;
   &:focus {
     border-color: #4da1ff;
   }

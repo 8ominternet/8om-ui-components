@@ -12,6 +12,7 @@ function loadStories() {
   require('../stories/SwitchToggle')
   require('../stories/SelectBox')
   require('../stories/Search')
+  require('../stories/Steps')
 
   // You can require as many stories as you need.
 }

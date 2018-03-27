@@ -45,7 +45,6 @@ const ItemWrapper = styled.a`
     height: 100%;
     position: absolute;
     left: 0px;
-    background-color: 'yellow';
     border-radius: 0 8px 8px 0;
     box-shadow: 2px 1px 11px 0px rgba(1,172,253,1);
     z-index: 9;
