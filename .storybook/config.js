@@ -5,6 +5,7 @@ function loadStories() {
   require('../stories/Button')
   require('../stories/Card')
   require('../stories/Dropdown')
+  require('../stories/FileDropzone')
   require('../stories/Input')
   require('../stories/Menu')
   require('../stories/Icon')

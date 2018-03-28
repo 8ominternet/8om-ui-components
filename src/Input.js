@@ -73,7 +73,7 @@ const StyledInput = styled.input`
   }
 `
 const Label = styled.p`
-  color: #323c47;
+  color: ${props => (props.disabled ? '#9b9b9b' : '#323c47')};
   font-size: 11px;
   margin-bottom: 8px;
   letter-spacing: 0.8px;
@@ -83,12 +83,17 @@ const Label = styled.p`
 class Input extends React.Component {
   state = { showPassword: false }
   render() {
-    const { labelStyle, placeholderColor, label, passwordToggle = true, type, ...props } = this.props
+    const { labelStyle, placeholderColor, disabled, label, passwordToggle = true, type, ...props } = this.props
     const { showPassword } = this.state
     return (
       <InputWrapper>
-        {label && <Label style={labelStyle && labelStyle}>{label}</Label>}
+        {label && (
+          <Label disabled={disabled} style={labelStyle && labelStyle}>
+            {label}
+          </Label>
+        )}
         <StyledInput
+          disabled={disabled}
           passwordToggle={passwordToggle}
           placeholderColor={placeholderColor && placeholderColor}
           type={type ? (showPassword ? 'text' : type) : 'text'}
