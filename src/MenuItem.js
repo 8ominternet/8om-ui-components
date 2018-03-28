@@ -2,7 +2,7 @@ import React from 'react'
 import styled, { withTheme } from 'styled-components'
 import { Icon } from './Icon'
 
-const ItemWrapper = styled.a`
+const ItemWrapper = styled.div`
   width: 100px;
   height: 100px;
   display: flex;
@@ -19,7 +19,7 @@ const ItemWrapper = styled.a`
       width: 10px;
       height: 100%;
       position: absolute;
-      box-shadow: ${props => (props.active ? ' 2px 1px 11px 0px rgba(1,172,253,1)' : 'none')} !important;
+      box-shadow: ${props => (props.active ? ' 2px 1px 11px 0px inherit' : 'none')} !important;
       left: 0px;
       background-color: ${props => (props.theme.themeColor ? props.theme.themeColor : '#4192ec')};
       border-radius: 0 8px 8px 0;

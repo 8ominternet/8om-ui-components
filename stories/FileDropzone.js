@@ -29,6 +29,10 @@ stories.add('Example', () => (
     <FileDropzone />
     <Code>{`<FileDropzone  />`}</Code>
 
+    <Title>Active </Title>
+    <FileDropzone active />
+    <Code>{`<FileDropzone active />`}</Code>
+
     <Title>Disabled</Title>
     <FileDropzone disabled />
     <Code>{`<FileDropzone disabled />`}</Code>

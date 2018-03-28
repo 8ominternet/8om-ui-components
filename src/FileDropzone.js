@@ -32,7 +32,9 @@ const FileInput = styled.input`
   z-index: 9;
   opacity: 0;
 
-  &:valid {
+  ${props =>
+    props.active &&
+    `
     & + div {
       border-color: #4da1ff;
       & p {
@@ -42,7 +44,7 @@ const FileInput = styled.input`
         }
       }
     }
-  }
+    `};
 `
 const ContentWrapper = styled.div`
   width: 100%;
@@ -67,11 +69,12 @@ class FileDropzone extends React.Component {
       title = 'You can also drop your files here',
       description,
       color = '#9b9b9b',
+      active = false,
       ...props
     } = this.props
     return (
       <FileWrapper>
-        <FileInput type="file" required {...props} />
+        <FileInput type="file" active={active} required {...props} />
         <ContentWrapper color={color}>
           <Title color={color}>
             <Icon icon={icon} color={color} />
