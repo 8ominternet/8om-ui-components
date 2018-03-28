@@ -5,7 +5,6 @@ const StepWrapper = styled.div`
   display: flex;
   flex-direction: column;
   background-color: #ffffff;
-  cursor: pointer;
   box-sizing: border-box;
   position: relative;
   padding-left: 20px;
@@ -50,9 +49,11 @@ const Title = styled.p`
 
 const Step = ({ title, theme, titleStyle, titleColor = '#323c47', titleSize = '11px', children, ...props }) => (
   <StepWrapper {...props}>
-    <Title theme={theme} style={{ titleStyle }} titleColor={titleColor} titleSize={titleSize}>
-      {title}
-    </Title>
+    {title && (
+      <Title theme={theme} style={{ titleStyle }} titleColor={titleColor} titleSize={titleSize}>
+        {title}
+      </Title>
+    )}
     {children}
   </StepWrapper>
 )
