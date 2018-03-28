@@ -14,6 +14,7 @@ function loadStories() {
   require('../stories/SelectBox')
   require('../stories/Search')
   require('../stories/Steps')
+  require('../stories/TextArea')
 
   // You can require as many stories as you need.
 }
