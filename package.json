@@ -1,6 +1,6 @@
 {
   "name": "@8om.io/ui-components",
-  "version": "1.0.15",
+  "version": "1.0.19",
   "description": "UI Components for 8om Enterprise Applications",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -31,8 +31,8 @@
   "dependencies": {},
   "peerDependencies": {
     "react": "16.x",
-    "styled-components": "^3.2.1",
-    "react-select": "^1.2.1"
+    "react-select": "^1.2.1",
+    "styled-components": "^3.2.1"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.3.15",
