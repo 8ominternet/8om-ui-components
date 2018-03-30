@@ -41,6 +41,13 @@ const StyledInput = styled.input`
   &:required {
     box-shadow: none;
   }
+  &:not(output):-moz-ui-invalid {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+
+  &:not(output):-moz-ui-invalid:-moz-focusring {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
   ${props =>
     props.readOnly &&
     `

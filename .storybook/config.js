@@ -4,6 +4,7 @@ import JSXAddon from 'storybook-addon-jsx'
 function loadStories() {
   require('../stories/Button')
   require('../stories/Card')
+  require('../stories/Datepicker')
   require('../stories/Dropdown')
   require('../stories/FileDropzone')
   require('../stories/Input')
@@ -15,6 +16,7 @@ function loadStories() {
   require('../stories/Search')
   require('../stories/Steps')
   require('../stories/TextArea')
+  require('../stories/TimeField')
 
   // You can require as many stories as you need.
 }

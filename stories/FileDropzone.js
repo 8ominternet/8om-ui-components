@@ -37,7 +37,7 @@ stories.add('Example', () => (
     <FileDropzone disabled />
     <Code>{`<FileDropzone disabled />`}</Code>
 
-    <Title>Width Title </Title>
+    <Title>With Title </Title>
     <FileDropzone title="I should have re-read my post. " />
     <Code>{`<FileDropzone title="I should have re-read my post. " />`}</Code>
 

@@ -24,7 +24,7 @@ const DropdownWrapper = styled.div`
     align-items: center;
   }
   & .Select-placeholder {
-    font-size: 16px;
+    font-size: ${props => (props.textSize ? props.textSize : '16px')};
     color: ${props => (props.textColor ? props.textColor : '#4192ec')};
     ${props => props.textStyle && { ...props.textStyle }};
   }
@@ -85,6 +85,8 @@ const DropdownWrapper = styled.div`
     color: #4a4a4a;
     border-radius: 0px;
     border-bottom: 1px solid #e9eff4;
+    font-size: 14px;
+    padding: 9px 10px;
     &:last-child {
       border: none;
     }
