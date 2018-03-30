@@ -67,6 +67,84 @@ const SelectWrapper = styled.div`
   & .Select-control:hover {
     box-shadow: none;
   }
+
+  & .Select-clear {
+    width: 15px;
+    height: 15px;
+    background-color: #ff7575;
+    color: #fff;
+    border-radius: 50%;
+    margin-right: 7px;
+    font-size: 16px !important;
+  }
+
+  ${props =>
+    props.customOptions &&
+    `
+    & .Select.is-open > .Select-control{
+      border-radius:4px;
+    }
+    & .Select-menu-outer{
+      border-radius: 4px;
+      box-shadow: 0 2px 1px 0 rgba(208, 215, 221, 0.42);
+      background-color: #ffffff;
+      border: solid 1px #e9eff4;
+      top: calc(100% + 10px);
+      &:before{
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-left: 1px solid #e9eff4;
+        border-bottom: 1px solid #e9eff4;
+        background: #fff;
+        left: 60%;
+        top: -6px;
+        transform: rotate(134deg);
+      }
+      & .Select-menu{
+        display: flex;
+        flex-wrap: wrap;
+        position:relative;
+
+      & .Select-option{
+        margin:3px
+        width: 41px;
+        height: 38px;
+        border-radius: 4px;
+        border: solid 1px #e9eff4;
+        font-size: 12px;
+        color: #9b9b9b;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        }
+      }
+    }
+
+    & .Select-multi-value-wrapper .Select-value{
+      display: inline-flex;
+      flex-direction: row-reverse;
+      border-radius: 4px;
+      background-color: rgba(155, 155, 155, 0.2);
+      border:none;
+      font-size: 12px;
+      color: #000000;
+      padding: 0 4px;
+      height:28px;
+      & > span{
+        display:flex;
+        align-items:center;
+        padding: 0 5px;
+        &:hover{
+          background-color:transparent;
+        }
+      }
+    }
+    & .Select-multi-value-wrapper .Select-value-icon{
+      border:none;
+    }
+  `};
 `
 
 const Label = styled.p`
@@ -78,12 +156,25 @@ const Label = styled.p`
 `
 
 class SelectBox extends React.Component {
+  state = {
+    selectedOption: [
+      { value: '1', label: '1' },
+      { value: '2', label: '2' },
+      { value: '3', label: '3' },
+      { value: '4', label: '4' }
+    ]
+  }
+
   render() {
-    const { labelStyle, placeholderColor, width, label, ...props } = this.props
+    const { labelStyle, customOptions, placeholderColor, width, label, ...props } = this.props
+    const { selectedOption } = this.state
+    const value = selectedOption
+    // console.log(selectedOption)
+
     return (
-      <SelectWrapper width={width}>
+      <SelectWrapper width={width} customOptions={customOptions}>
         {label && <Label style={labelStyle && labelStyle}>{label}</Label>}
-        <Select clearable={false} {...props} />
+        <Select clearable={customOptions ? true : false} {...props} value={value} />
       </SelectWrapper>
     )
   }

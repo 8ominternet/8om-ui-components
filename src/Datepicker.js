@@ -30,17 +30,17 @@ const DatepickerWrapper = styled.section`
 const Icons = styled.div`
   position: absolute;
   right: 0px;
-  width:38px
-  height:38px
-  min-width:38px
-  min-height:38px
+  width: 38px;
+  height: 36px;
+  min-width: 38px;
+  min-height: 36px;
   bottom: 0px;
-  border-left: 1px solid #e9eff4;
+  border: 1px solid #e9eff4;
   background-color: #f4f7f9;
   display: flex;
   align-items: center;
-  z-index: -1;
   justify-content: center;
+  border-radius: 0px 4px 4px 0px;
 `
 
 const Label = styled.p`
@@ -62,7 +62,7 @@ class Datepicker extends React.Component {
           </Label>
         )}
         <DatePicker disabled={disabled} {...props} />
-        <Icons>
+        <Icons disabled={disabled}>
           <Icon icon="calendar" />
         </Icons>
       </DatepickerWrapper>

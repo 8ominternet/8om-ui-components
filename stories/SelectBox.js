@@ -19,6 +19,11 @@ const Title = styled.p`
   font-family: sans-serif;
   padding-top: 20px;
 `
+const options = []
+for (let i = 1; i <= 30; i++) {
+  options.push({ value: `${i}`, label: `${i}` })
+}
+
 const stories = storiesOf('SelectBox', module)
 stories.addDecorator(withKnobs)
 setAddon(JSXAddon)
@@ -26,12 +31,16 @@ setAddon(JSXAddon)
 stories.add('Example', () => (
   <Div>
     <Title>Default</Title>
-    <SelectBox />
+    <SelectBox options={options} value={{ value: '1' }} />
     <Code>{`<SelectBox  />`}</Code>
 
     <Title>Disabled</Title>
     <SelectBox disabled />
     <Code>{`<SelectBox disabled />`}</Code>
+
+    <Title>Redesign Option</Title>
+    <SelectBox customOptions multi={true} options={options} />
+    <Code>{`<SelectBox customOptions options={options} />`}</Code>
 
     <Title>With Label</Title>
     <SelectBox label="FIRST NAME" />
@@ -39,7 +48,7 @@ stories.add('Example', () => (
 
     <Title>With Width</Title>
     <SelectBox width="600px" />
-    <Code>{`<SelectBox label="FIRST NAME" />`}</Code>
+    <Code>{`<SelectBox width="600px" />`}</Code>
     <p>
       <strong>Note:</strong> See more Options and Methods{' '}
       <a href="https://github.com/JedWatson/react-select" target="_blank">
