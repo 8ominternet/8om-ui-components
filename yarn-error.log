@@ -16,7 +16,7 @@ Platform:
 npm manifest: 
   {
     "name": "@8om.io/ui-components",
-    "version": "1.0.11",
+    "version": "1.0.14",
     "description": "UI Components for 8om Enterprise Applications",
     "main": "lib/index.js",
     "module": "es/index.js",
@@ -11018,14 +11018,14 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/yeast/-/yeast-0.1.2.tgz#008e06d8094320c372dbc2f8ed76a0ca6c8ac419"
 
 Trace: 
-  Error: canceled
-      at Interface.<anonymous> (/Users/harshmaur/.nvm/versions/node/v8.7.0/lib/node_modules/yarn/lib/cli.js:120971:13)
-      at emitNone (events.js:105:13)
-      at Interface.emit (events.js:207:7)
-      at Interface._ttyWrite (readline.js:775:16)
-      at ReadStream.onkeypress (readline.js:160:10)
+  Error: https://registry.yarnpkg.com/@8om.io%2fui-components: You cannot publish over the previously published versions: 1.0.14.
+      at Request.params.callback [as _callback] (/Users/harshmaur/.nvm/versions/node/v8.7.0/lib/node_modules/yarn/lib/cli.js:62027:18)
+      at Request.self.callback (/Users/harshmaur/.nvm/versions/node/v8.7.0/lib/node_modules/yarn/lib/cli.js:123011:22)
       at emitTwo (events.js:125:13)
-      at ReadStream.emit (events.js:213:7)
-      at emitKeys (internal/readline.js:420:14)
-      at emitKeys.next (<anonymous>)
-      at ReadStream.onData (readline.js:1011:36)
+      at Request.emit (events.js:213:7)
+      at Request.<anonymous> (/Users/harshmaur/.nvm/versions/node/v8.7.0/lib/node_modules/yarn/lib/cli.js:123994:10)
+      at emitOne (events.js:115:13)
+      at Request.emit (events.js:210:7)
+      at Gunzip.<anonymous> (/Users/harshmaur/.nvm/versions/node/v8.7.0/lib/node_modules/yarn/lib/cli.js:123914:12)
+      at Object.onceWrapper (events.js:314:30)
+      at emitNone (events.js:110:20)

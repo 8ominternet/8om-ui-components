@@ -1,6 +1,6 @@
 {
   "name": "@8om.io/ui-components",
-  "version": "1.0.12",
+  "version": "1.0.21",
   "description": "UI Components for 8om Enterprise Applications",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -19,7 +19,7 @@
     "test:coverage": "nwb test-react --coverage",
     "test:watch": "nwb test-react --server",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "build-storybook": "build-storybook -c .storybook -o .out",
     "publish": "yarn build && npm publish --access public"
   },
   "lint-staged": {
