@@ -19,10 +19,10 @@ const Title = styled.p`
   font-family: sans-serif;
   padding-top: 20px;
 `
-const options = []
-for (let i = 1; i <= 30; i++) {
-  options.push({ value: `${i}`, label: `${i}` })
-}
+//const options = {}
+// for (let i = 1; i <= 30; i++) {
+//   options.push({ value: `${i}`, label: `${i}` })
+// }
 
 const stories = storiesOf('SelectBox', module)
 stories.addDecorator(withKnobs)
@@ -31,7 +31,7 @@ setAddon(JSXAddon)
 stories.add('Example', () => (
   <Div>
     <Title>Default</Title>
-    <SelectBox options={options} value={{ value: '1' }} />
+    <SelectBox value={{ value: '1' }} />
     <Code>{`<SelectBox  />`}</Code>
 
     <Title>Disabled</Title>
@@ -39,8 +39,8 @@ stories.add('Example', () => (
     <Code>{`<SelectBox disabled />`}</Code>
 
     <Title>Redesign Option</Title>
-    <SelectBox customOptions multi={true} options={options} />
-    <Code>{`<SelectBox customOptions options={options} />`}</Code>
+    <SelectBox customOptions multi={true} />
+    <Code>{`<SelectBox customOptions  />`}</Code>
 
     <Title>With Label</Title>
     <SelectBox label="FIRST NAME" />

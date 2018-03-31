@@ -75,7 +75,7 @@ const SelectWrapper = styled.div`
     color: #fff;
     border-radius: 50%;
     margin-right: 7px;
-    font-size: 16px !important;
+    font-size: 14px !important;
   }
 
   ${props =>
@@ -144,6 +144,11 @@ const SelectWrapper = styled.div`
     & .Select-multi-value-wrapper .Select-value-icon{
       border:none;
     }
+    & .Select-option.is-selected{
+      background-color: #4da1ff !important;
+      border: solid 1px #4da1ff !important;
+      color:#fff !important;
+    }
   `};
 `
 
@@ -156,25 +161,12 @@ const Label = styled.p`
 `
 
 class SelectBox extends React.Component {
-  state = {
-    selectedOption: [
-      { value: '1', label: '1' },
-      { value: '2', label: '2' },
-      { value: '3', label: '3' },
-      { value: '4', label: '4' }
-    ]
-  }
-
   render() {
     const { labelStyle, customOptions, placeholderColor, width, label, ...props } = this.props
-    const { selectedOption } = this.state
-    const value = selectedOption
-    // console.log(selectedOption)
-
     return (
       <SelectWrapper width={width} customOptions={customOptions}>
         {label && <Label style={labelStyle && labelStyle}>{label}</Label>}
-        <Select clearable={customOptions ? true : false} {...props} value={value} />
+        <Select clearable={customOptions ? true : false} {...props} />
       </SelectWrapper>
     )
   }
