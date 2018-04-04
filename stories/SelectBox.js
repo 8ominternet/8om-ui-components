@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { setAddon, storiesOf } from '@storybook/react'
-import { boolean, text, select, object, color, withKnobs } from '@storybook/addon-knobs/react'
+import { boolean, text, object, withKnobs } from '@storybook/addon-knobs/react'
 import JSXAddon from 'storybook-addon-jsx'
 import { SelectBox } from '../src/SelectBox'
 const Div = styled.div`
@@ -19,10 +19,6 @@ const Title = styled.p`
   font-family: sans-serif;
   padding-top: 20px;
 `
-//const options = {}
-// for (let i = 1; i <= 30; i++) {
-//   options.push({ value: `${i}`, label: `${i}` })
-// }
 
 const stories = storiesOf('SelectBox', module)
 stories.addDecorator(withKnobs)
@@ -49,6 +45,10 @@ stories.add('Example', () => (
     <Title>With Width</Title>
     <SelectBox width="600px" />
     <Code>{`<SelectBox width="600px" />`}</Code>
+
+    <Title>With Padding</Title>
+    <SelectBox padding="15px" />
+    <Code>{`<SelectBox padding="15px" />`}</Code>
     <p>
       <strong>Note:</strong> See more Options and Methods{' '}
       <a href="https://github.com/JedWatson/react-select" target="_blank">

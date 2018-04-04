@@ -48,6 +48,7 @@ const Label = styled.p`
   font-size: 11px;
   margin-bottom: 8px;
   letter-spacing: 0.8px;
+
   font-family: sans-serif;
 `
 

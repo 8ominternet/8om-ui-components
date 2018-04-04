@@ -127,7 +127,7 @@ class Search extends React.Component {
           width={width}
           placeholder="Search"
           placeholderColor={placeholderColor && placeholderColor}
-          type={'search'}
+          type={'text'}
           required
           {...props}
         />

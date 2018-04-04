@@ -94,6 +94,9 @@ const DropdownWrapper = styled.div`
   & .Select-control:hover {
     box-shadow: none;
   }
+  & .Select-menu .Select-noresults {
+    font-size: 13px;
+  }
 `
 
 const Label = styled.p`
