@@ -85,7 +85,7 @@ class Icon extends React.Component {
           </svg>
         )
       },
-      help: () => {
+      chat: () => {
         return (
           <svg
             height={this.props.height ? this.props.height : 22}
@@ -108,6 +108,61 @@ class Icon extends React.Component {
                   />
                 </g>
               </g>
+            </g>
+          </svg>
+        )
+      },
+      help: () => {
+        return (
+          <svg
+            height={this.props.height ? this.props.height : 24}
+            width={this.props.width ? this.props.width : 24}
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <g id="Layer_1">
+              <path
+                fill="none"
+                stroke="#007AFF"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeMiterlimit="10"
+                d="M22.5,12
+              c0,5.801-4.702,10.5-10.5,10.5C6.201,22.5,1.5,17.801,1.5,12C1.5,6.202,6.201,1.5,12,1.5C17.798,1.5,22.5,6.202,22.5,12z M12,5.25
+              c-3.728,0-6.75,3.022-6.75,6.75c0,3.729,3.022,6.75,6.75,6.75c3.728,0,6.75-3.021,6.75-6.75C18.75,8.272,15.728,5.25,12,5.25z"
+              />
+
+              <line
+                fill="none"
+                stroke="#007AFF"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeMiterlimit="10"
+                x1="7.133"
+                y1="16.867"
+                x2="4.784"
+                y2="19.217"
+              />
+
+              <line
+                fill="none"
+                stroke="#007AFF"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeMiterlimit="10"
+                x1="19.336"
+                y1="4.664"
+                x2="16.812"
+                y2="7.187"
+              />
+              <path
+                fill="none"
+                stroke="#007AFF"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeMiterlimit="10"
+                d="M7.2,7.2
+              L4.575,4.575 M19.425,19.425l-2.646-2.646"
+              />
             </g>
           </svg>
         )

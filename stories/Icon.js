@@ -55,7 +55,7 @@ stories.add('Example', () => (
     <Icon icon={'overview'} width={55} height={55} />
     <Code>{`<Icon icon={'overview'} width={55} height={55} />`}</Code>
 
-    <h3>Available Icon</h3>
+    <h3>Available Icons</h3>
     <IconGroup>
       <p>
         <Icon icon={'overview'} /> overview
@@ -68,6 +68,9 @@ stories.add('Example', () => (
       </p>
       <p>
         <Icon icon={'help'} /> help
+      </p>
+      <p>
+        <Icon icon={'chat'} /> chat
       </p>
       <p>
         <Icon icon={'project'} /> project
