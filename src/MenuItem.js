@@ -72,16 +72,17 @@ const ItemWrapper = styled.div`
 const IconWrapper = styled.div`
   width: 50px;
   height: 50px;
+  min-height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 14px;
+  margin-top: 14px;
 `
 const ItemName = styled.p`
   color: ${props => (props.theme.themeColor ? props.theme.themeColor : '#4192ec')};
   font-size: 15px;
   margin: 0px;
-  padding: 8px 0px;
+  padding: 6px 0px;
   line-height: 20px;
 `
 

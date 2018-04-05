@@ -123,6 +123,9 @@ stories.add('Example', () => (
       <p>
         <Icon icon={'copy'} /> copy
       </p>
+      <p>
+        <Icon icon={'close'} /> copy
+      </p>
     </IconGroup>
   </Div>
 ))
