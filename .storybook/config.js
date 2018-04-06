@@ -4,6 +4,7 @@ import JSXAddon from 'storybook-addon-jsx'
 function loadStories() {
   require('../stories/Button')
   require('../stories/Card')
+  require('../stories/Checkbox')
   require('../stories/ConfirmDialog')
   require('../stories/Datepicker')
   require('../stories/Dropdown')
