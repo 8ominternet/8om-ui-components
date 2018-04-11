@@ -94,8 +94,14 @@ const DropdownWrapper = styled.div`
   & .Select-control:hover {
     box-shadow: none;
   }
-  & .Select-menu .Select-noresults {
-    font-size: 13px;
+  & .Select-menu {
+    &::-webkit-scrollbar {
+      width: 0px;
+      display: none;
+    }
+    & .Select-noresults {
+      font-size: 13px;
+    }
   }
 `
 
@@ -116,7 +122,7 @@ class Dropdown extends React.Component {
       textStyle,
       textColor,
       width,
-      iconColor,
+      iconColor = '#4192ec',
       label,
       ...props
     } = this.props

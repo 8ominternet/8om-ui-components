@@ -2,9 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 const Wrapper = styled.div`
   display: inline-block;
-  max-width: ${props => (props.circle ? '15px' : '14px')};
-  max-height: ${props => (props.circle ? '15px' : '14px')};
-  padding-left: ${props => (props.circle ? '15px' : '0px')};
+  max-width: ${props => (props.circle ? '15px' : '18px')};
+  max-height: ${props => (props.circle ? '15px' : '18px')};
+  box-sizing: border-box;
+  & * {
+    box-sizing: border-box;
+  }
 `
 const StyledInput = styled.input`
   opacity: 0;
@@ -20,10 +23,10 @@ const StyledInput = styled.input`
 `
 const Circle = styled.label`
   position: relative;
-  width: ${props => (props.circle ? '15px' : '14px')};
-  height: ${props => (props.circle ? '15px' : '14px')};
-  min-width: ${props => (props.circle ? '15px' : '14px')};
-  min-height: ${props => (props.circle ? '15px' : '14px')};
+  width: ${props => (props.circle ? '15px' : '18px')};
+  height: ${props => (props.circle ? '15px' : '18px')};
+  min-width: ${props => (props.circle ? '15px' : '18px')};
+  min-height: ${props => (props.circle ? '15px' : '18px')};
   border-radius: ${props => (props.circle ? '50%' : '2px')};
   display: block;
   border: ${props => (props.circle ? ' 1px solid #e0e0e0' : ' 2px solid #4a4a4a')};
