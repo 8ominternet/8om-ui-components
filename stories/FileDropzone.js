@@ -49,6 +49,14 @@ stories.add('Example', () => (
     <FileDropzone color="red" />
     <Code>{`<FileDropzone color="red" />`}</Code>
 
+    <Title>With loading</Title>
+    <FileDropzone isLoading />
+    <Code>{`<FileDropzone isLoading />`}</Code>
+
+    <Title>loader color </Title>
+    <FileDropzone isLoading loaderColor="green" />
+    <Code>{`<FileDropzone  loaderColor="green" />`}</Code>
+
     <Title>Description text</Title>
     <FileDropzone description="Reference site about Lorem Ipsum" />
     <Code>{`<FileDropzone description="Reference site about Lorem Ipsum" />`}</Code>
@@ -60,9 +68,11 @@ stories.addWithJSX('Playground', () => (
     label={text('label', 'INPUT FIELD')}
     placeholder={text('placeholder', 'Text Field')}
     placeholderColor={color('placeholderColor', '#4da1ff')}
+    loaderColor={color('loaderColor', '#4da1ff')}
     type={select('type', { text: 'text', password: 'password', email: 'email' }, 'password')}
     disabled={boolean('disabled', false)}
     readOnly={boolean('readOnly', false)}
+    isLoading={boolean('isLoading', false)}
     passwordToggle={boolean('passwordToggle', true)}
     labelStyle={object('labelStyle', { color: '#323c47' })}
   />

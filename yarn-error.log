@@ -1,5 +1,5 @@
 Arguments: 
-  /home/chandan/.nvm/versions/node/v9.6.0/bin/node /home/chandan/.nvm/versions/node/v9.6.0/bin/yarn storybook
+  /home/chandan/.nvm/versions/node/v9.6.0/bin/node /home/chandan/.nvm/versions/node/v9.6.0/bin/yarn start
 
 PATH: 
   /home/chandan/.nvm/versions/node/v9.6.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
@@ -11057,9 +11057,9 @@ Lockfile:
 
 Trace: 
   Error: Command failed.
-  Exit signal: SIGHUP
+  Exit code: 130
   Command: sh
-  Arguments: -c start-storybook -p 6006
+  Arguments: -c nwb serve-react-demo
   Directory: /home/chandan/oss/8om-ui-components
   Output:
   

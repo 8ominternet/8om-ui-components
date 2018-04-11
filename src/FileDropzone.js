@@ -1,9 +1,10 @@
-import React from 'react'
-import styled from 'styled-components'
+import React, { Fragment } from 'react'
+import styled, { keyframes } from 'styled-components'
 import { Icon } from './Icon'
 const FileWrapper = styled.section`
   position: relative;
   display: inline-block;
+  width: 100%;
 `
 const Title = styled.p`
   margin: 0px;
@@ -62,6 +63,21 @@ const ContentWrapper = styled.div`
   box-sizing: border-box;
   color: ${props => props.color && props.color};
 `
+const spin = keyframes`
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+`
+const Loading = styled.div`
+  border: 4px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 4px solid ${props => props.loaderColor};
+  border-bottom: 4px solid ${props => props.loaderColor};
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  animation: ${spin} 2s linear infinite;
+`
+
 class FileDropzone extends React.Component {
   render() {
     const {
@@ -69,24 +85,35 @@ class FileDropzone extends React.Component {
       title = 'You can also drop your files here',
       description,
       color = '#9b9b9b',
+      loaderColor = '#4da1ff',
       active = false,
+      isLoading = false,
       ...props
     } = this.props
     return (
       <FileWrapper>
-        <FileInput type="file" active={active} required {...props} />
-        <ContentWrapper color={color}>
-          <Title color={color}>
-            <Icon icon={icon} color={color} />
-            {title}
-          </Title>
-          <Content color={color}>
-            {description
-              ? description
-              : ` Requirement file is a requirement.txt file in which you have to mention the dependencies or python packages
+        {!isLoading && (
+          <Fragment>
+            <FileInput type="file" active={active} required {...props} />
+            <ContentWrapper color={color}>
+              <Title color={color}>
+                <Icon icon={icon} color={color} />
+                {title}
+              </Title>
+              <Content color={color}>
+                {description
+                  ? description
+                  : ` Requirement file is a requirement.txt file in which you have to mention the dependencies or python packages
           require to run your Project`}
-          </Content>
-        </ContentWrapper>
+              </Content>
+            </ContentWrapper>
+          </Fragment>
+        )}
+        {isLoading && (
+          <ContentWrapper>
+            <Loading loaderColor={loaderColor} />
+          </ContentWrapper>
+        )}
       </FileWrapper>
     )
   }
