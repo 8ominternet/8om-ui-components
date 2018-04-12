@@ -21,8 +21,6 @@ const StepsWrapper = styled.div`
 class Steps extends React.Component {
   render() {
     const { children, themeColor = '#4192ec', activeStep, ...props } = this.props
-    var cnt = React.Children.count(this.props.children)
-    console.log(cnt)
     return (
       <ThemeProvider theme={{ activeStep: activeStep, themeColor: themeColor }}>
         <StepsWrapper activeStep={activeStep} {...props}>

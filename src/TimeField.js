@@ -99,7 +99,17 @@ class TimeField extends React.Component {
     this.setState({ currentValue: this.state.currentValue - 1 })
   }
   render() {
-    const { width = '90px', format, labelStyle, disabled, onChange, label, ...props } = this.props
+    const {
+      width = '90px',
+      format,
+      labelStyle,
+      disabled,
+      onChange,
+      min = '1',
+      max = '60',
+      label,
+      ...props
+    } = this.props
     const { currentValue } = this.state
     return (
       <TimeFieldWrapper width={width}>
@@ -114,6 +124,8 @@ class TimeField extends React.Component {
           <InputNumber
             defaultValue="5hr"
             disabled={disabled}
+            min={min}
+            max={max}
             {...props}
             type="number"
             onChange={e => {
@@ -124,17 +136,25 @@ class TimeField extends React.Component {
         </InputContainer>
         <Icons disabled={disabled}>
           <div
-            onClick={() => {
-              this.add()
-              onChange && onChange(currentValue + 1)
-            }}>
+            onClick={
+              currentValue !== Number(max)
+                ? () => {
+                    this.add()
+                    onChange && onChange(currentValue + 1)
+                  }
+                : () => null
+            }>
             +
           </div>
           <div
-            onClick={() => {
-              this.minus()
-              onChange && onChange(currentValue - 1)
-            }}>
+            onClick={
+              currentValue >= Number(min)
+                ? () => {
+                    this.minus()
+                    onChange && onChange(currentValue - 1)
+                  }
+                : () => null
+            }>
             -
           </div>
         </Icons>
