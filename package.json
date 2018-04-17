@@ -1,6 +1,6 @@
 {
   "name": "@8om.io/ui-components",
-  "version": "1.0.21",
+  "version": "1.0.29",
   "description": "UI Components for 8om Enterprise Applications",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -31,9 +31,9 @@
   "dependencies": {},
   "peerDependencies": {
     "react": "16.x",
+    "react-datepicker": "^1.3.0",
     "react-select": "^1.2.1",
-    "styled-components": "^3.2.1",
-    "react-datepicker": "^1.3.0"
+    "styled-components": "3.0.1"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.3.15",
@@ -56,11 +56,11 @@
     "nwb": "0.21.x",
     "prettier": "^1.11.1",
     "react": "^16.2.0",
+    "react-datepicker": "^1.3.0",
     "react-dom": "^16.2.0",
     "react-select": "^1.2.1",
     "storybook-addon-jsx": "^5.3.0",
-    "styled-components": "^3.2.1",
-    "react-datepicker": "^1.3.0"
+    "styled-components": "3.0.1"
   },
   "author": "",
   "homepage": "https://github.com/harshmaur/8om-ui-components",
