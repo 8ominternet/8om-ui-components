@@ -89,26 +89,27 @@ const ActionButton = styled.button`
   }
 `
 class ConfirmDialog extends React.Component {
+  static defaultProps = {
+    show: false,
+    title: 'Delete',
+    message: 'Are you sure you want to delete selected items ?',
+    onConfirm: () => {},
+    onCancel: () => {},
+    confirmText: 'Yes',
+    cancelText: 'No'
+  }
   render() {
-    const {
-      show = false,
-      title = 'Delete',
-      message = 'Are you sure you want to delete selected items ?',
-      onConfirm,
-      onCancel,
-      confirmText = 'Yes',
-      cancelText = 'No'
-    } = this.props
+    const { show, title, message, onConfirm, onCancel, confirmText, cancelText } = this.props
     return (
       <ConfirmWrapper show={show}>
         <ConfirmBox>
           <Title>{title}</Title>
           <Message>{message}</Message>
           <ButtonWrapper>
-            <ActionButton cancel onClick={onCancel ? () => onCancel(false) : () => null}>
+            <ActionButton cancel onClick={() => onCancel(false)}>
               {cancelText}
             </ActionButton>
-            <ActionButton onClick={onConfirm ? () => onConfirm(true) : () => null}>{confirmText}</ActionButton>
+            <ActionButton onClick={() => onConfirm(true)}>{confirmText}</ActionButton>
           </ButtonWrapper>
         </ConfirmBox>
       </ConfirmWrapper>
