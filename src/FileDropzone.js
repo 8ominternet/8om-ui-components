@@ -5,6 +5,8 @@ const FileWrapper = styled.section`
   position: relative;
   display: inline-block;
   width: 100%;
+  max-width: ${props => props.width};
+  height: ${props => props.height};
 `
 const Title = styled.p`
   margin: 0px;
@@ -49,8 +51,8 @@ const FileInput = styled.input`
 `
 const ContentWrapper = styled.div`
   width: 100%;
-  max-width: ${props => (props.width ? props.width : '380px')};
-  height: ${props => (props.height ? props.height : '120px')};
+  max-width: ${props => props.width};
+  height: ${props => props.height};
   border-radius: 6px;
   background-color: #ffffff;
   border: dashed 1px #e8e6e6;
@@ -86,16 +88,18 @@ class FileDropzone extends React.Component {
       description,
       color = '#9b9b9b',
       loaderColor = '#4da1ff',
+      width = '380px',
+      height = '120px',
       active = false,
       isLoading = false,
       ...props
     } = this.props
     return (
-      <FileWrapper>
+      <FileWrapper width={width} height={height}>
         {!isLoading && (
           <Fragment>
             <FileInput type="file" active={active} required {...props} />
-            <ContentWrapper color={color}>
+            <ContentWrapper color={color} width={width} height={height}>
               <Title color={color}>
                 <Icon icon={icon} color={color} />
                 {title}
@@ -110,7 +114,7 @@ class FileDropzone extends React.Component {
           </Fragment>
         )}
         {isLoading && (
-          <ContentWrapper>
+          <ContentWrapper width={width} height={height}>
             <Loading loaderColor={loaderColor} />
           </ContentWrapper>
         )}

@@ -51,7 +51,7 @@ const ModalHead = styled.div`
 
 const ContentContainer = styled.div`
   width: 100%;
-  max-height: 326px;
+  max-height: 350px;
   overflow-y: auto;
 
   &::-webkit-scrollbar {
