@@ -81,11 +81,16 @@ const Circle = styled.div`
 `
 
 class Button extends React.Component {
+  static defaultProps = {
+    isLoading: false,
+    label: 'Button'
+  }
+
   render() {
     const { isLoading, label, ...props } = this.props
     return (
       <ButtonWrapper {...props} isLoading={isLoading}>
-        {isLoading ? <Circle /> : label ? label : 'Button'}
+        {isLoading ? <Circle /> : label}
       </ButtonWrapper>
     )
   }
