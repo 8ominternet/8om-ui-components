@@ -14,13 +14,13 @@ const zoomIn = keyframes`
 `
 
 const ConfirmWrapper = styled.section`
-  position:fixed; 
-  width:100%
-  height:100%;
+  position: fixed;
+  width: 100%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.08);
-  display:${props => (props.show ? 'flex' : 'none')};
-  justify-content:center;
-  align-items:center;
+  display: ${props => (props.show ? 'flex' : 'none')};
+  justify-content: center;
+  align-items: center;
   z-index: 2147483647;
   top: 0px;
   left: 0px;
