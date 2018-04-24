@@ -64,10 +64,11 @@ stories.add('Example', () => (
     <Title>Final State with File Name</Title>
     <FileDropzone
       fileName="ABC Project.zip"
+      fileHandlerLabel="Reload"
       onDelete={e => console.log(e)}
       description="Reference site about Lorem Ipsum"
     />
-    <Code>{`<FileDropzone fileName="ABC Project.zip" onDelete={e => console.log(e)} />`}</Code>
+    <Code>{`<FileDropzone fileName="ABC Project.zip" fileHandlerLabel="Reload" onDelete={e => console.log(e)} />`}</Code>
   </Div>
 ))
 
