@@ -60,6 +60,14 @@ stories.add('Example', () => (
     <Title>Description text</Title>
     <FileDropzone description="Reference site about Lorem Ipsum" />
     <Code>{`<FileDropzone description="Reference site about Lorem Ipsum" />`}</Code>
+
+    <Title>Final State with File Name</Title>
+    <FileDropzone
+      fileName="ABC Project.zip"
+      onDelete={e => console.log(e)}
+      description="Reference site about Lorem Ipsum"
+    />
+    <Code>{`<FileDropzone fileName="ABC Project.zip" onDelete={e => console.log(e)} />`}</Code>
   </Div>
 ))
 

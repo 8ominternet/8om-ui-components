@@ -7,6 +7,9 @@ const FileWrapper = styled.section`
   width: 100%;
   max-width: ${props => props.width};
   height: ${props => props.height};
+  &:hover {
+    box-shadow: 0 2px 4px 0 #d0d7dd;
+  }
 `
 const Title = styled.p`
   margin: 0px;
@@ -56,6 +59,7 @@ const ContentWrapper = styled.div`
   border-radius: 6px;
   background-color: #ffffff;
   border: dashed 1px #e8e6e6;
+  border-color: ${props => props.active && '#4da1ff'};
   justify-content: center;
   align-items: center;
   display: flex;
@@ -79,11 +83,36 @@ const Loading = styled.div`
   min-width: 40px;
   animation: ${spin} 2s linear infinite;
 `
-
+const FileNameWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+`
+const FileName = styled.div`
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -0.1px;
+  color: #4da1ff;
+  align-self: center;
+`
+const DeleteUpload = styled.div`
+  font-size: 12px;
+  font-weight: 500;
+  color: #323c47;
+  margin: 0px;
+  cursor: pointer;
+  align-self: flex-end;
+  position: absolute;
+  top: 12px;
+`
 class FileDropzone extends React.Component {
+  onDelete() {
+    alert('Delete')
+  }
   render() {
     const {
       icon = 'upload',
+      visibleIcon = true,
       title = 'You can also drop your files here',
       description,
       color = '#9b9b9b',
@@ -91,33 +120,40 @@ class FileDropzone extends React.Component {
       width = '380px',
       height = '120px',
       active = false,
+      onDelete,
+      fileName,
       isLoading = false,
       ...props
     } = this.props
     return (
       <FileWrapper width={width} height={height}>
-        {!isLoading && (
+        {!isLoading && !fileName ? (
           <Fragment>
             <FileInput type="file" active={active} required {...props} />
             <ContentWrapper color={color} width={width} height={height}>
               <Title color={color}>
-                <Icon icon={icon} color={color} />
+                {visibleIcon && <Icon icon={icon} color={color} />}
                 {title}
               </Title>
-              <Content color={color}>
-                {description
-                  ? description
-                  : ` Requirement file is a requirement.txt file in which you have to mention the dependencies or python packages
-          require to run your Project`}
-              </Content>
+              <Content color={color}>{description && description}</Content>
             </ContentWrapper>
           </Fragment>
-        )}
+        ) : null}
         {isLoading && (
           <ContentWrapper width={width} height={height}>
             <Loading loaderColor={loaderColor} />
           </ContentWrapper>
         )}
+        {!isLoading && fileName ? (
+          <Fragment>
+            <ContentWrapper width={width} height={height} active>
+              <FileNameWrapper>
+                <DeleteUpload onClick={onDelete ? () => onDelete(fileName) : () => null}>Delete Upload</DeleteUpload>
+                <FileName>{fileName}</FileName>
+              </FileNameWrapper>
+            </ContentWrapper>
+          </Fragment>
+        ) : null}
       </FileWrapper>
     )
   }
