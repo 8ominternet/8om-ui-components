@@ -13,6 +13,7 @@ const StyledInput = styled.input`
   opacity: 0;
   position: absolute;
   z-index: 9;
+  cursor: pointer;
   &:checked + label {
     background-color: #4192ec;
     border-color: #4192ec;
