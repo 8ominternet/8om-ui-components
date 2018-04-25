@@ -5,7 +5,7 @@ const FileWrapper = styled.section`
   position: relative;
   display: inline-block;
   width: 100%;
-  max-width: ${props => props.width};
+  min-width: ${props => props.width};
   height: ${props => props.height};
   border-radius: 6px;
   &:hover {
@@ -55,7 +55,7 @@ const FileInput = styled.input`
 `
 const ContentWrapper = styled.div`
   width: 100%;
-  max-width: ${props => props.width};
+  min-width: ${props => props.width};
   height: ${props => props.height};
   border-radius: 6px;
   background-color: #ffffff;
