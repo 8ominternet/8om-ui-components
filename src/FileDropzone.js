@@ -7,6 +7,7 @@ const FileWrapper = styled.section`
   width: 100%;
   min-width: ${props => props.width};
   height: ${props => props.height};
+  border-radius: 6px;
   &:hover {
     box-shadow: 0 2px 4px 0 #d0d7dd;
   }
@@ -122,6 +123,7 @@ class FileDropzone extends React.Component {
       active = false,
       onDelete,
       fileName,
+      fileHandlerLabel,
       isLoading = false,
       ...props
     } = this.props
@@ -148,7 +150,9 @@ class FileDropzone extends React.Component {
           <Fragment>
             <ContentWrapper width={width} height={height} active>
               <FileNameWrapper>
-                <DeleteUpload onClick={onDelete ? () => onDelete(fileName) : () => null}>Delete Upload</DeleteUpload>
+                <DeleteUpload onClick={onDelete ? () => onDelete(fileName) : () => null}>
+                  {fileHandlerLabel}
+                </DeleteUpload>
                 <FileName>{fileName}</FileName>
               </FileNameWrapper>
             </ContentWrapper>
