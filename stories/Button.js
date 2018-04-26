@@ -59,6 +59,10 @@ stories
       <Title>Loading</Title>
       <Button isLoading />
       <Code>{`<Button isLoading />`}</Code>
+
+      <Title>Loading Color</Title>
+      <Button isLoading loadingBgColor={'#b0d5ff'} loadingFgColor={'#d01717'} />
+      <Code>{`<Button isLoading loadingBgColor={"#b0d5ff"} loadingFgColor={"#d01717"} />`}</Code>
     </div>
   ))
 

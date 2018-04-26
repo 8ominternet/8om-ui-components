@@ -71,9 +71,9 @@ const spin = keyframes`
 100% {transform: rotate(360deg) }
 `
 const Circle = styled.div`
-  border: 3px solid #b0d5ff;
+  border: 3px solid ${props => (props.loadingBgColor ? props.loadingBgColor : '#b0d5ff')};
   border-radius: 50%;
-  border-top: 3px solid #ffffff;
+  border-top: 3px solid ${props => (props.loadingFgColor ? props.loadingFgColor : '#ffffff')};
   margin: auto;
   width: 20px;
   height: 20px;
@@ -87,10 +87,10 @@ class Button extends React.Component {
   }
 
   render() {
-    const { isLoading, label, ...props } = this.props
+    const { isLoading, label, loadingBgColor, loadingFgColor, ...props } = this.props
     return (
       <ButtonWrapper {...props} isLoading={isLoading}>
-        {isLoading ? <Circle /> : label}
+        {isLoading ? <Circle loadingBgColor={loadingBgColor} loadingFgColor={loadingFgColor} /> : label}
       </ButtonWrapper>
     )
   }
