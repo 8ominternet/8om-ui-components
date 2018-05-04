@@ -23,13 +23,13 @@ const Title = styled.p`
 const IconGroup = styled.div`
   display: flex;
   flex-wrap: wrap;
-  box-sizing:border-box;
-  width:600px;
+  box-sizing: border-box;
+  width: 600px;
   & p {
     display: flex;
     color: #737373;
     font-size: 15px;
-    width:33.33%
+    width: 33.33%;
     align-items: center;
     & svg {
       margin-right: 10px;
