@@ -13,7 +13,7 @@ const ItemWrapper = styled.div`
   cursor: pointer;
   box-sizing: border-box;
   position: relative;
-  z-index: 999;
+  z-index: 9999;
   &:hover {
     &:after {
       content: '';
