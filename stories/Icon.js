@@ -106,6 +106,9 @@ stories.add('Example', () => (
         <Icon icon={'google'} /> google
       </p>
       <p>
+        <Icon icon={'information'} /> information
+      </p>
+      <p>
         <Icon icon={'calendar'} /> calendar
       </p>
       <p>
