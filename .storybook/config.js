@@ -20,6 +20,7 @@ function loadStories() {
   require('../stories/Steps')
   require('../stories/TextArea')
   require('../stories/TimeField')
+  require('../stories/Tooltip')
 
   // You can require as many stories as you need.
 }
