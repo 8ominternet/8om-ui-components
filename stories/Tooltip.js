@@ -4,6 +4,7 @@ import { setAddon, storiesOf } from '@storybook/react'
 import { boolean, text, object, color, withKnobs } from '@storybook/addon-knobs/react'
 import JSXAddon from 'storybook-addon-jsx'
 import { Tooltip } from '../src/Tooltip'
+import { Icon } from '../src/Icon'
 
 const Div = styled.div`
   font-family: sans-serif;
@@ -28,7 +29,9 @@ setAddon(JSXAddon)
 stories.add('Example', () => (
   <Div>
     <Title>Default</Title>
-    <Tooltip icon={'help'} tooltipText={'Hello World'} />
-    <Code>{`<Tooltip icon="help" tooltipText={'Hello World'} />`}</Code>
+    <Tooltip tooltip={'Hey, you are looking at tooltip!'}>
+      <Icon icon="help" />
+    </Tooltip>
+    <Code>{`<Tooltip icon="help" tooltipText={'Hey, you are looking at tooltip!'}><Icon icon="information" /></Tooltip>`}</Code>
   </Div>
 ))
