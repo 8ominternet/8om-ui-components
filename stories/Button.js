@@ -75,5 +75,7 @@ stories
       backgroundColorOnHover={color('backgroundColorOnHover', '#3c95f9')}
       colorOnHover={color('colorOnHover', '#ffffff')}
       isLoading={boolean('isLoading', false)}
+      loadingBgColor={color('loadingBgColor', '#b0d5ff')}
+      loadingFgColor={color('loadingFgColor', '#d01717')}
     />
   ))
