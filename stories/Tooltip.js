@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { setAddon, storiesOf } from '@storybook/react'
-import { boolean, text, object, color, withKnobs } from '@storybook/addon-knobs/react'
+import { text, select, withKnobs } from '@storybook/addon-knobs/react'
 import JSXAddon from 'storybook-addon-jsx'
 import { Tooltip } from '../src/Tooltip'
 import { Icon } from '../src/Icon'
@@ -9,6 +9,9 @@ import { Button } from '../src/Button'
 
 const Div = styled.div`
   font-family: sans-serif;
+`
+const Playground = styled.div`
+  margin: 100px;
 `
 const Code = styled.code`
   padding: 20px;
@@ -35,4 +38,15 @@ stories.add('Example', () => (
     </Tooltip>
     <Code>{`<Tooltip placement="right" component={<Button label="Submit" />} tooltipText={'Hey, you are looking at tooltip!'}><Icon icon="information" /></Tooltip>`}</Code>
   </Div>
+))
+
+stories.addWithJSX('Playground', () => (
+  <Playground>
+    <Tooltip
+      tooltipText={text('tooltipText', 'Hey, you are looking at tooltip')}
+      placement={select('placement', { left: 'left', right: 'right', top: 'top', bottom: 'bottom' })}
+      component={<Button label="Submit" />}>
+      <Icon icon="help" />
+    </Tooltip>
+  </Playground>
 ))
