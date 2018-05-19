@@ -11,7 +11,7 @@ const Div = styled.div`
   font-family: sans-serif;
 `
 const Playground = styled.div`
-  margin: 100px;
+  margin: 100px 220px;
 `
 const Code = styled.code`
   padding: 20px;
