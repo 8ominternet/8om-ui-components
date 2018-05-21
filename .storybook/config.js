@@ -14,6 +14,7 @@ function loadStories() {
   require('../stories/Menu')
   require('../stories/Modal')
   require('../stories/Radio')
+  require('../stories/Switcher')
   require('../stories/SwitchToggle')
   require('../stories/SelectBox')
   require('../stories/Search')
