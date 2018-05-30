@@ -34,6 +34,11 @@ stories.add('Example', () => (
     <Input readOnly />
     <Code>{`<Input readOnly />`}</Code>
 
+    <Title>Information Icon</Title>
+    <Input showTooltip={true} infoMessage={true} toolTipText={'Hey hi i am a Tooltip'} />
+    <Code>{`<Input showTooltip={this.state.onInputChange}
+    toolTipText={'Hey hi i am a Tooltip'} />`}</Code>
+
     <Title>Placeholder Color</Title>
     <Input placeholder="Input Field" placeholderColor="#4da1ff" />
     <Code>{` <Input placeholder="Input Field" placeholderColor="#4da1ff" />`}</Code>
@@ -60,7 +65,10 @@ stories.addWithJSX('Playground', () => (
     type={select('type', { text: 'text', password: 'password', email: 'email' }, 'password')}
     disabled={boolean('disabled', false)}
     readOnly={boolean('readOnly', false)}
-    passwordToggle={boolean('passwordToggle', true)}
+    passwordToggle={boolean('passwordToggle', false)}
     labelStyle={object('labelStyle', { color: '#323c47' })}
+    toolTipText={text('toolTipText', 'Hey hi i am a Tooltip')}
+    infoMessage={boolean('infoMessage', false)}
+    showTooltip={boolean('showTooltip', false)}
   />
 ))
