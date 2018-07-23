@@ -66,9 +66,9 @@ const ItemWrapper = styled.div`
         width: 50px;
         height: 50px;
         border-radius: 50%;
-        background-color: #fafcfe;
+        // background-color: #fafcfe;
         border: 1px solid rgba(233, 239, 244, 0.4); 
-        z-index: -1;
+        // z-index: -1;
       }
     }
   &:after {
