@@ -56,17 +56,19 @@ class Datepicker extends React.Component {
   render() {
     const { width = '200px', labelStyle, disabled, label, ...props } = this.props
     return (
-      <DatepickerWrapper width={width}>
-        {label && (
-          <Label disabled={disabled} style={labelStyle && labelStyle}>
-            {label}
-          </Label>
-        )}
-        <DatePicker disabled={disabled} {...props} />
-        <Icons disabled={disabled}>
-          <Icon icon="calendar" />
-        </Icons>
-      </DatepickerWrapper>
+      <label>
+        <DatepickerWrapper width={width}>
+          {label && (
+            <Label disabled={disabled} style={labelStyle && labelStyle}>
+              {label}
+            </Label>
+          )}
+          <DatePicker disabled={disabled} {...props} />
+          <Icons disabled={disabled}>
+            <Icon icon="calendar" />
+          </Icons>
+        </DatepickerWrapper>
+      </label>
     )
   }
 }
