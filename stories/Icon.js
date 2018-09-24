@@ -24,12 +24,11 @@ const IconGroup = styled.div`
   display: flex;
   flex-wrap: wrap;
   box-sizing: border-box;
-  width: 600px;
   & p {
     display: flex;
     color: #737373;
     font-size: 15px;
-    width: 33.33%;
+    width: 25%;
     align-items: center;
     & svg {
       margin-right: 10px;
@@ -131,6 +130,33 @@ stories.add('Example', () => (
       </p>
       <p>
         <Icon icon={'close'} /> copy
+      </p>
+      <p>
+        <Icon icon={'bell'} /> bell
+      </p>
+      <p>
+        <Icon icon={'buySale'} /> buySale
+      </p>
+      <p>
+        <Icon icon={'camera'} /> camera
+      </p>
+      <p>
+        <Icon icon={'deleteBox'} /> deleteBox
+      </p>
+      <p>
+        <Icon icon={'archive'} /> archive
+      </p>
+      <p>
+        <Icon icon={'attachment'} /> attachment
+      </p>
+      <p>
+        <Icon icon={'support'} /> support
+      </p>
+      <p>
+        <Icon icon={'transactions'} /> transactions
+      </p>
+      <p>
+        <Icon icon={'wallet'} /> wallet
       </p>
     </IconGroup>
   </Div>

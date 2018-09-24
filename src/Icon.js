@@ -2,47 +2,48 @@ import React from 'react'
 
 class Icon extends React.Component {
   render() {
+    const { width, height, color, icon } = this.props
     const svg = {
       passwordShow: () => {
         return (
           <svg
-            height={this.props.height ? this.props.height : 16}
-            width={this.props.width ? this.props.width : 16}
+            height={height ? height : 16}
+            width={width ? width : 16}
             viewBox="0 0 16 16"
             xmlns="http://www.w3.org/2000/svg">
             <path
               fill="none"
-              stroke={this.props.color ? this.props.color : '#323C47'}
+              stroke={color ? color : '#323C47'}
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeMiterlimit="10"
               d="M0.55,8.187
             c0,0,6.868-10.649,14.9-0.116C15.45,8.07,8.291,18.141,0.55,8.187z"
             />
-            <circle fill={this.props.color ? this.props.color : '#323C47'} cx="8" cy="8" r="2" />
+            <circle fill={color ? color : '#323C47'} cx="8" cy="8" r="2" />
           </svg>
         )
       },
       passwordHide: () => {
         return (
           <svg
-            height={this.props.height ? this.props.height : 16}
-            width={this.props.width ? this.props.width : 16}
+            height={height ? height : 16}
+            width={width ? width : 16}
             viewBox="0 0 16 16"
             xmlns="http://www.w3.org/2000/svg">
             <path
               fill="none"
-              stroke={this.props.color ? this.props.color : '#323C47'}
+              stroke={color ? color : '#323C47'}
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeMiterlimit="10"
               d="M0.55,8.187
             c0,0,6.868-10.649,14.9-0.116C15.45,8.07,8.291,18.141,0.55,8.187z"
             />
-            <circle fill={this.props.color ? this.props.color : '#323C47'} cx="8" cy="8" r="2" />
+            <circle fill={color ? color : '#323C47'} cx="8" cy="8" r="2" />
             <line
               fill="none"
-              stroke={this.props.color ? this.props.color : '#323C47'}
+              stroke={color ? color : '#323C47'}
               strokeMiterlimit="10"
               x1="14.016"
               y1="1.287"
@@ -56,8 +57,8 @@ class Icon extends React.Component {
       overview: () => {
         return (
           <svg
-            height={this.props.height ? this.props.height : 16}
-            width={this.props.width ? this.props.width : 24}
+            height={height ? height : 16}
+            width={width ? width : 24}
             viewBox="0 0 24 16"
             xmlns="http://www.w3.org/2000/svg">
             <g
@@ -68,10 +69,7 @@ class Icon extends React.Component {
               fillRule="evenodd"
               strokeLinecap="round"
               strokeLinejoin="round">
-              <g
-                id="Artboard"
-                transform="translate(-39.000000, -58.000000)"
-                stroke={this.props.color ? this.props.color : '#007AFF'}>
+              <g id="Artboard" transform="translate(-39.000000, -58.000000)" stroke={color ? color : '#007AFF'}>
                 <g id="dashboard" transform="translate(39.000000, 59.000000)">
                   <path
                     d="M16.667,11.283 L23.297,11.283 C23.297,11.283 23.297,11.283 23.271,11.012 C22.686,4.898 17.979,0.04 12,0.04 C6.093,0.04 1.245,4.767 0.745,10.791 C0.718,11.129 0.702,11.283 0.702,11.283 L9.135,11.283"
@@ -88,15 +86,12 @@ class Icon extends React.Component {
       chat: () => {
         return (
           <svg
-            height={this.props.height ? this.props.height : 22}
-            width={this.props.width ? this.props.width : 23}
+            height={height ? height : 22}
+            width={width ? width : 23}
             viewBox="0 0 23 22"
             xmlns="http://www.w3.org/2000/svg">
             <g id="Overview-Measurements" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-              <g
-                id="Artboard"
-                transform="translate(-39.000000, -354.000000)"
-                fill={this.props.color ? this.props.color : '#007AFF'}>
+              <g id="Artboard" transform="translate(-39.000000, -354.000000)" fill={color ? color : '#007AFF'}>
                 <g id="conversations-icon" transform="translate(39.000000, 354.000000)">
                   <path
                     d="M14.0873436,21.8272464 C11.6541688,21.8272464 9.33488139,20.6529574 7.88095096,18.6702263 L8.63148712,18.1066241 C9.92905585,19.8751204 11.9169498,20.8855551 14.0868768,20.8855551 L14.1013461,20.8855551 C15.1590046,20.8855551 16.1723218,20.6491906 17.1128258,20.1745782 C17.2864573,20.0874717 17.4964954,20.1209018 17.6383878,20.2541511 C18.3814559,20.9467651 20.2083207,20.8855551 21.4214074,20.7264093 C19.9007315,18.7832293 20.228391,17.0415712 20.2447273,16.9601149 C20.2517285,16.9257432 20.2624638,16.892784 20.2769331,16.8602956 C20.6830068,15.9572137 20.8874439,14.9924509 20.8851101,13.9919039 C20.8813761,12.0661452 20.1140369,10.2816402 18.7254517,8.96656827 L19.3644342,8.27960446 C20.9196497,9.75240966 21.814412,11.8340183 21.8186128,13.9904914 C21.8209466,15.1054539 21.5973727,16.1822779 21.1530254,17.191771 C21.1152185,17.4738075 20.9938632,19.0421944 22.662966,20.7184049 C22.7843213,20.8403539 22.8291295,21.0192753 22.7810541,21.1854838 C22.7325119,21.3507506 22.5980875,21.4764664 22.4305238,21.5127215 C22.051055,21.5941778 18.8463403,22.2307612 17.2617194,21.1468745 C16.2675391,21.6012405 15.2061465,21.8272464 14.1032131,21.8272464 L14.0873436,21.8272464 Z"
@@ -115,12 +110,12 @@ class Icon extends React.Component {
       help: () => {
         return (
           <svg
-            height={this.props.height ? this.props.height : 24}
-            width={this.props.width ? this.props.width : 24}
+            height={height ? height : 24}
+            width={width ? width : 24}
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg">
             <path
-              fill={this.props.color ? this.props.color : '#007AFF'}
+              fill={color ? color : '#007AFF'}
               d="M5.1,6.4L5.1,6.4C5.1,6.5,5.1,6.4,5.1,6.4L5.1,6.4z M13.7,23.8c-1.2,0-2.1-0.9-2.1-2.1
 	s0.9-2.1,2.1-2.1s2.1,0.9,2.1,2.1S14.9,23.8,13.7,23.8z M13.7,20.6c-0.6,0-1.1,0.5-1.1,1.1s0.5,1.1,1.1,1.1s1.1-0.5,1.1-1.1
 	S14.3,20.6,13.7,20.6z M17.8,2.3c-1.4-1.4-3.3-2.2-5.3-2.2S8.6,0.9,7.2,2.3C6,3.5,5.3,4.9,5.1,6.3v0.1c0,1,0.8,1.8,1.7,1.8
@@ -136,15 +131,12 @@ class Icon extends React.Component {
       project: () => {
         return (
           <svg
-            height={this.props.height ? this.props.height : 18}
-            width={this.props.width ? this.props.width : 23}
+            height={height ? height : 18}
+            width={width ? width : 23}
             viewBox="0 0 23 18"
             xmlns="http://www.w3.org/2000/svg">
             <g id="Overview-Measurements" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-              <g
-                id="Artboard"
-                transform="translate(-39.000000, -156.000000)"
-                fill={this.props.color ? this.props.color : '#007AFF'}>
+              <g id="Artboard" transform="translate(-39.000000, -156.000000)" fill={color ? color : '#007AFF'}>
                 <g id="dashboard-icon" transform="translate(39.000000, 156.000000)">
                   <path
                     d="M1.96856071,4.66609816 L11.4833143,8.27267244 L20.997546,4.66609816 L11.4833143,1.05952388 L1.96856071,4.66609816 Z M11.4833143,9.33219631 C11.4191136,9.33219631 11.3549129,9.32094654 11.2943659,9.29793565 L0.333269525,5.14319071 C0.132316092,5.06648773 0.000260978485,4.87728704 0.000260978485,4.66609816 C0.000260978485,4.45490928 0.132316092,4.26570858 0.333269525,4.1890056 L11.2943659,0.0342606659 C11.4159819,-0.0112497709 11.5501248,-0.0112497709 11.6717408,0.0342606659 L22.6328372,4.1890056 C22.8337906,4.26570858 22.9663677,4.45490928 22.9663677,4.66609816 C22.9663677,4.87728704 22.8337906,5.06648773 22.6328372,5.14319071 L11.6717408,9.29793565 C11.6111938,9.32094654 11.5469931,9.33219631 11.4833143,9.33219631 L11.4833143,9.33219631 Z"
@@ -167,14 +159,14 @@ class Icon extends React.Component {
       search: () => {
         return (
           <svg
-            height={this.props.height ? this.props.height : 22}
-            width={this.props.width ? this.props.width : 21}
+            height={height ? height : 22}
+            width={width ? width : 21}
             viewBox="0 0 21 22"
             xmlns="http://www.w3.org/2000/svg">
             <g>
               <circle
                 fill="none"
-                stroke={this.props.color ? this.props.color : '#4A4A4A'}
+                stroke={color ? color : '#4A4A4A'}
                 strokeWidth="1.5"
                 strokeMiterlimit="10"
                 cx="9.167"
@@ -184,7 +176,7 @@ class Icon extends React.Component {
 
               <line
                 fill="#FFFFFF"
-                stroke={this.props.color ? this.props.color : '#4A4A4A'}
+                stroke={color ? color : '#4A4A4A'}
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeMiterlimit="10"
@@ -200,15 +192,12 @@ class Icon extends React.Component {
       setting: () => {
         return (
           <svg
-            height={this.props.height ? this.props.height : 21}
-            width={this.props.width ? this.props.width : 21}
+            height={height ? height : 21}
+            width={width ? width : 21}
             viewBox="0 0 21 21"
             xmlns="http://www.w3.org/2000/svg">
             <g id="Overview-Measurements" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-              <g
-                id="Artboard"
-                transform="translate(-40.000000, -455.000000)"
-                fill={this.props.color ? this.props.color : '#007AFF'}>
+              <g id="Artboard" transform="translate(-40.000000, -455.000000)" fill={color ? color : '#007AFF'}>
                 <g id="settings-icon" transform="translate(40.000000, 455.000000)">
                   <path
                     d="M6.05247391,16.9465891 C6.1383,16.9465891 6.22458261,16.9707848 6.2999087,17.0196326 C7.09060435,17.5300239 7.95206087,17.8883935 8.86053913,18.0837848 C9.04086522,18.1225891 9.18056087,18.26685 9.21343043,18.4485457 L9.44306087,19.7121978 C9.48277826,19.9290457 9.67177826,20.0870022 9.89227826,20.0870022 L11.1075391,20.0870022 C11.3284957,20.0870022 11.5170391,19.9290457 11.5567565,19.7117413 L11.786387,18.4485457 C11.8192565,18.26685 11.9589522,18.1225891 12.1392783,18.0837848 C13.0477565,17.8883935 13.909213,17.5300239 14.6999087,17.0196326 C14.8551261,16.9182848 15.0559957,16.9223935 15.2075609,17.02785 L16.2666913,17.7610239 C16.4442783,17.8838283 16.6971913,17.8600891 16.849213,17.7085239 L17.7088435,16.84935 C17.8649739,16.6932196 17.886887,16.4480674 17.760887,16.2668283 L17.027713,15.2072413 C16.922713,15.0552196 16.9195174,14.855263 17.0194957,14.7000457 C17.5303435,13.90935 17.8882565,13.047437 18.0836478,12.1398717 C18.1224522,11.9586326 18.2662565,11.81985 18.4484087,11.7860674 L19.7120609,11.556437 C19.9293652,11.5171761 20.0868652,11.3281761 20.0868652,11.1076761 L20.0868652,9.89241522 C20.0868652,9.6714587 19.9293652,9.4824587 19.7120609,9.4427413 L18.4484087,9.21402391 C18.2662565,9.1802413 18.1224522,9.0414587 18.0836478,8.86021957 C17.8882565,7.95265435 17.5303435,7.0907413 17.0194957,6.30004565 C16.9195174,6.14482826 16.922713,5.94441522 17.027713,5.79239348 L17.760887,4.73326304 C17.886887,4.55202391 17.8649739,4.30687174 17.7088435,4.1507413 L16.849213,3.29156739 C16.6967348,3.14000217 16.4438217,3.11580652 16.2666913,3.23906739 L15.2075609,3.9722413 C15.0559957,4.07769783 14.8555826,4.08135 14.6999087,3.9804587 C13.9087565,3.46961087 13.0477565,3.11169783 12.1392783,2.91630652 C11.9589522,2.87750217 11.8192565,2.7332413 11.786387,2.55154565 L11.5567565,1.28789348 C11.5170391,1.07104565 11.3284957,0.91308913 11.1075391,0.91308913 L9.89227826,0.91308913 C9.67177826,0.91308913 9.48277826,1.07104565 9.44306087,1.28835 L9.21343043,2.55154565 C9.18056087,2.7332413 9.04086522,2.87750217 8.86053913,2.91630652 C7.95251739,3.11169783 7.09106087,3.46961087 6.2999087,3.9804587 C6.1446913,4.08135 5.94427826,4.07769783 5.79271304,3.9722413 L4.73312609,3.23906739 C4.55599565,3.11626304 4.30262609,3.14000217 4.15060435,3.29156739 L3.29143043,4.1507413 C3.1353,4.30687174 3.11338696,4.55202391 3.23893043,4.73326304 L3.97210435,5.79239348 C4.07756087,5.94441522 4.08075652,6.14482826 3.98032174,6.30004565 C3.46993043,7.0907413 3.11201739,7.95265435 2.91616957,8.86021957 C2.87736522,9.0414587 2.73356087,9.1802413 2.55186522,9.21402391 L1.28775652,9.44319783 C1.07045217,9.4824587 0.912952174,9.6714587 0.912952174,9.89241522 L0.912952174,11.1076761 C0.912952174,11.3281761 1.07045217,11.5171761 1.28775652,11.5568935 L2.55186522,11.7860674 C2.73356087,11.81985 2.87736522,11.9586326 2.91616957,12.1398717 C3.11201739,13.047437 3.46993043,13.90935 3.98032174,14.7000457 C4.08075652,14.855263 4.07756087,15.0552196 3.97210435,15.2072413 L3.23893043,16.2668283 C3.11338696,16.4480674 3.1353,16.6932196 3.29143043,16.84935 L4.15060435,17.7085239 C4.30262609,17.8600891 4.55553913,17.8833717 4.73358261,17.7610239 L5.79271304,17.02785 C5.87077826,16.9739804 5.96162609,16.9465891 6.05247391,16.9465891 M11.1075391,21.0000457 L9.89227826,21.0000457 C9.23032174,21.0000457 8.66377826,20.5270891 8.54462609,19.8756326 L8.36886522,18.906437 C7.56036522,18.7019152 6.78838696,18.3809804 6.06616957,17.9486543 L5.25310435,18.5120022 C4.72125652,18.8790457 3.96114783,18.8101109 3.50508261,18.3540457 L2.6459087,17.4948717 C2.17751739,17.026937 2.11132174,16.2914804 2.48795217,15.74685 L3.05084348,14.9342413 C2.61897391,14.2115674 2.29803913,13.4391326 2.09397391,12.6310891 L1.12477826,12.4553283 C0.472865217,12.3366326 -9.13043477e-05,11.7700891 -9.13043477e-05,11.1076761 L-9.13043477e-05,9.89241522 C-9.13043477e-05,9.23000217 0.472865217,8.66300217 1.12477826,8.54521957 L2.09397391,8.36900217 C2.29803913,7.56050217 2.61897391,6.78852391 3.05084348,6.06585 L2.48795217,5.2532413 C2.11132174,4.70815435 2.17751739,3.97315435 2.6459087,3.50521957 L3.50508261,2.64604565 C3.96114783,2.18998043 4.72171304,2.12058913 5.25310435,2.48808913 L6.06616957,3.05143696 C6.78838696,2.61911087 7.56082174,2.29817609 8.36886522,2.09365435 L8.54462609,1.12491522 C8.66377826,0.473002174 9.23032174,4.56521739e-05 9.89227826,4.56521739e-05 L11.1075391,4.56521739e-05 C11.7694957,4.56521739e-05 12.3364957,0.473002174 12.4551913,1.1244587 L12.6314087,2.09365435 C13.4394522,2.29817609 14.2114304,2.61911087 14.9341043,3.05143696 L15.746713,2.48808913 C16.2785609,2.12058913 17.0391261,2.18998043 17.4947348,2.64604565 L18.3543652,3.50521957 C18.8227565,3.97315435 18.8889522,4.70815435 18.5118652,5.2532413 L17.9489739,6.06585 C18.3808435,6.78852391 18.7017783,7.56050217 18.9063,8.36900217 L19.8754957,8.54476304 C20.5269522,8.66300217 20.9999087,9.23000217 20.9999087,9.89241522 L20.9999087,11.1076761 C20.9999087,11.7700891 20.5269522,12.3366326 19.8754957,12.4548717 L18.9063,12.6310891 C18.7017783,13.4391326 18.3808435,14.2115674 17.9489739,14.9342413 L18.5118652,15.74685 C18.8889522,16.2914804 18.8227565,17.026937 18.3543652,17.4948717 L17.4947348,18.3540457 C17.2363435,18.612437 16.8921261,18.7553283 16.5259957,18.7553283 C16.2466043,18.7553283 15.9772565,18.6708717 15.7471696,18.5120022 L14.9341043,17.9486543 C14.211887,18.3809804 13.4394522,18.7019152 12.6314087,18.906437 L12.4551913,19.8751761 C12.3364957,20.5270891 11.7694957,21.0000457 11.1075391,21.0000457"
@@ -227,15 +216,12 @@ class Icon extends React.Component {
       task: () => {
         return (
           <svg
-            height={this.props.height ? this.props.height : 22}
-            width={this.props.width ? this.props.width : 18}
+            height={height ? height : 22}
+            width={width ? width : 18}
             viewBox="0 0 18 22"
             xmlns="http://www.w3.org/2000/svg">
             <g id="Overview-Measurements" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-              <g
-                id="Artboard"
-                transform="translate(-41.000000, -254.000000)"
-                fill={this.props.color ? this.props.color : '#007AFF'}>
+              <g id="Artboard" transform="translate(-41.000000, -254.000000)" fill={color ? color : '#007AFF'}>
                 <g id="files-board-icon" transform="translate(41.000000, 254.000000)">
                   <path
                     d="M1.40283401,0.949852942 C1.14518016,0.949852942 0.935222672,1.16309493 0.935222672,1.42477941 L0.935222672,20.4218383 C0.935222672,20.6835227 1.14518016,20.8967647 1.40283401,20.8967647 L16.3663968,20.8967647 C16.6240506,20.8967647 16.8340081,20.6835227 16.8340081,20.4218383 L16.8340081,6.37066368 L11.4966923,0.949852942 L1.40283401,0.949852942 Z M16.3663968,21.8466177 L1.40283401,21.8466177 C0.629404858,21.8466177 0,21.2073666 0,20.4218383 L0,1.42477941 C0,0.63925103 0.629404858,0 1.40283401,0 L11.6902834,0 C11.8142004,0 11.9334413,0.0498672795 12.0208846,0.139153456 L17.6322206,5.83827111 C17.7201316,5.92708236 17.7692308,6.04818861 17.7692308,6.17404413 L17.7692308,20.4218383 C17.7692308,21.2073666 17.1398259,21.8466177 16.3663968,21.8466177 L16.3663968,21.8466177 Z"
@@ -270,15 +256,15 @@ class Icon extends React.Component {
       user: () => {
         return (
           <svg
-            height={this.props.height ? this.props.height : 21}
-            width={this.props.width ? this.props.width : 21}
+            height={height ? height : 21}
+            width={width ? width : 21}
             viewBox="0 0 21 21"
             xmlns="http://www.w3.org/2000/svg">
             <g id="Overview-Measurements--styling" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
               <g
                 id="Overview-(Measurements)"
                 transform="translate(-979.000000, -50.000000)"
-                fill={this.props.color ? this.props.color : '#007AFF'}
+                fill={color ? color : '#007AFF'}
                 fillRule="nonzero">
                 <g id="meetings-icon" transform="translate(979.000000, 50.000000)">
                   <path
@@ -294,14 +280,14 @@ class Icon extends React.Component {
       back: () => {
         return (
           <svg
-            height={this.props.height ? this.props.height : 16}
-            width={this.props.width ? this.props.width : 20}
+            height={height ? height : 16}
+            width={width ? width : 20}
             viewBox="2 0 20 16"
             xmlns="http://www.w3.org/2000/svg">
             <g id="back">
               <polyline
                 fill="none"
-                stroke={this.props.color ? this.props.color : '#007AFF'}
+                stroke={color ? color : '#007AFF'}
                 strokeLinecap="round"
                 strokeMiterlimit="10"
                 points="9.389,14.552 2.8,7.961 
@@ -309,7 +295,7 @@ class Icon extends React.Component {
               />
               <line
                 fill="none"
-                stroke={this.props.color ? this.props.color : '#007AFF'}
+                stroke={color ? color : '#007AFF'}
                 strokeLinecap="round"
                 strokeMiterlimit="10"
                 x1="2.972"
@@ -324,16 +310,16 @@ class Icon extends React.Component {
       downArrow: () => {
         return (
           <svg
-            height={this.props.height ? this.props.height : 7}
-            width={this.props.width ? this.props.width : 11}
+            height={height ? height : 7}
+            width={width ? width : 11}
             viewBox="0 0 11 7"
             xmlns="http://www.w3.org/2000/svg">
             <g id="Symbols" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
               <g
                 id="Overall-Performance"
                 transform="translate(-218.000000, -7.000000)"
-                fill={this.props.color ? this.props.color : '#808FA3'}
-                stroke={this.props.color ? this.props.color : '#808FA3'}
+                fill={color ? color : '#808FA3'}
+                stroke={color ? color : '#808FA3'}
                 strokeWidth="0.3">
                 <g id="Group-12">
                   <path
@@ -350,15 +336,15 @@ class Icon extends React.Component {
       leftArrow: () => {
         return (
           <svg
-            height={this.props.height ? this.props.height : 24}
-            width={this.props.width ? this.props.width : 24}
+            height={height ? height : 24}
+            width={width ? width : 24}
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg">
             <path
               opacity="0.8"
               fillRule="evenodd"
               clipRule="evenodd"
-              fill={this.props.color ? this.props.color : '#757575'}
+              fill={color ? color : '#757575'}
               d="M15.264,7.424L10.504,12l4.76,4.576
             c0.329,0.316,0.34,0.84,0.023,1.17c-0.317,0.329-0.841,0.34-1.171,0.022l-5.381-5.172C8.573,12.44,8.482,12.225,8.482,12
             s0.091-0.44,0.253-0.597l5.381-5.173C14.277,6.076,14.483,6,14.69,6c0.217,0,0.434,0.085,0.597,0.254
@@ -370,15 +356,15 @@ class Icon extends React.Component {
       rightArrow: () => {
         return (
           <svg
-            height={this.props.height ? this.props.height : 24}
-            width={this.props.width ? this.props.width : 24}
+            height={height ? height : 24}
+            width={width ? width : 24}
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg">
             <path
               opacity="0.8"
               fillRule="evenodd"
               clipRule="evenodd"
-              fill={this.props.color ? this.props.color : '#757575'}
+              fill={color ? color : '#757575'}
               d="M8.736,16.576L13.496,12l-4.76-4.576
             c-0.329-0.316-0.34-0.84-0.023-1.17s0.841-0.34,1.17-0.023l5.381,5.172c0.162,0.156,0.253,0.372,0.253,0.597
             s-0.091,0.44-0.253,0.597L9.884,17.77C9.723,17.924,9.517,18,9.31,18c-0.217,0-0.434-0.085-0.597-0.254
@@ -390,8 +376,8 @@ class Icon extends React.Component {
       upArrow: () => {
         return (
           <svg
-            height={this.props.height ? this.props.height : 24}
-            width={this.props.width ? this.props.width : 24}
+            height={height ? height : 24}
+            width={width ? width : 24}
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg">
             <g>
@@ -411,7 +397,7 @@ class Icon extends React.Component {
                   x="2.499"
                   y="4.363"
                   clipPath="url(#SVGID_2_)"
-                  fill={this.props.color ? this.props.color : '#808FA3'}
+                  fill={color ? color : '#808FA3'}
                   width="19"
                   height="15.275"
                 />
@@ -419,7 +405,7 @@ class Icon extends React.Component {
             </g>
             <path
               fill="none"
-              stroke={this.props.color ? this.props.color : '#808FA3'}
+              stroke={color ? color : '#808FA3'}
               strokeWidth="0.3"
               strokeMiterlimit="10"
               d="M15.432,14.446
@@ -433,10 +419,10 @@ class Icon extends React.Component {
       upload: () => {
         return (
           <svg
-            height={this.props.height ? this.props.height : 24}
-            width={this.props.width ? this.props.width : 24}
+            height={height ? height : 24}
+            width={width ? width : 24}
             viewBox="0 0 24 24"
-            fill={this.props.color ? this.props.color : '#808FA3'}
+            fill={color ? color : '#808FA3'}
             xmlns="http://www.w3.org/2000/svg">
             <path
               fillRule="evenodd"
@@ -459,12 +445,12 @@ class Icon extends React.Component {
       copy: () => {
         return (
           <svg
-            height={this.props.height ? this.props.height : 24}
-            width={this.props.width ? this.props.width : 24}
+            height={height ? height : 24}
+            width={width ? width : 24}
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg">
             <path
-              fill={this.props.color ? this.props.color : '#4DA1FF'}
+              fill={color ? color : '#4DA1FF'}
               d="M17.925,8.389L17.925,8.389v10.387c0,0.249-0.205,0.451-0.457,0.451H6.532c-0.251,0-0.457-0.201-0.457-0.451
             V5.225c0-0.249,0.204-0.452,0.457-0.452h7.747v0.001l0,0l3.645,3.612h0.003L17.925,8.389L17.925,8.389z M13.366,8.386V5.675H7.442
             c-0.25,0-0.455,0.204-0.455,0.454v11.742c0,0.252,0.203,0.453,0.455,0.453h9.113c0.252,0,0.456-0.201,0.456-0.453v-8.58h-2.733
@@ -476,14 +462,14 @@ class Icon extends React.Component {
       calendar: () => {
         return (
           <svg
-            height={this.props.height ? this.props.height : 24}
-            width={this.props.width ? this.props.width : 24}
+            height={height ? height : 24}
+            width={width ? width : 24}
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg">
             <path
               fillRule="evenodd"
               clipRule="evenodd"
-              fill={this.props.color ? this.props.color : '#4DA1FF'}
+              fill={color ? color : '#4DA1FF'}
               d="M17.54,18.893H6.458c-0.471,0-0.853-0.386-0.853-0.861V9.416V8.554
             V6.83c0-0.475,0.382-0.861,0.853-0.861h2.557V5.107h0.853v0.861h4.262V5.107h0.853v0.861h2.983c0.471,0,0.427,0.387,0.427,0.861
             v1.724v0.862v8.615C18.393,18.507,18.011,18.893,17.54,18.893z M17.54,7.262c0-0.238-0.19-0.432-0.426-0.432h-2.132v0.862H14.13
@@ -500,14 +486,14 @@ class Icon extends React.Component {
       clone: () => {
         return (
           <svg
-            height={this.props.height ? this.props.height : 16}
-            width={this.props.width ? this.props.width : 16}
+            height={height ? height : 16}
+            width={width ? width : 16}
             viewBox="0 0 12 12"
             xmlns="http://www.w3.org/2000/svg">
             <g>
               <path
                 fill="none"
-                stroke={this.props.color ? this.props.color : '#4DA1FF'}
+                stroke={color ? color : '#4DA1FF'}
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeMiterlimit="10"
@@ -519,7 +505,7 @@ class Icon extends React.Component {
                 x="3.296"
                 y="4.621"
                 fill="none"
-                stroke={this.props.color ? this.props.color : '#4DA1FF'}
+                stroke={color ? color : '#4DA1FF'}
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeMiterlimit="10"
@@ -528,7 +514,7 @@ class Icon extends React.Component {
               />
               <polyline
                 fill="none"
-                stroke={this.props.color ? this.props.color : '#4DA1FF'}
+                stroke={color ? color : '#4DA1FF'}
                 strokeLinecap="square"
                 strokeLinejoin="round"
                 strokeMiterlimit="10"
@@ -542,9 +528,9 @@ class Icon extends React.Component {
       close: () => {
         return (
           <svg
-            height={this.props.height ? this.props.height : 24}
-            width={this.props.width ? this.props.width : 24}
-            fill={this.props.color ? this.props.color : '#4a4a4a'}
+            height={height ? height : 24}
+            width={width ? width : 24}
+            fill={color ? color : '#4a4a4a'}
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg">
             <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
@@ -555,15 +541,15 @@ class Icon extends React.Component {
       dotsHorizontal: () => {
         return (
           <svg
-            height={this.props.height ? this.props.height : 24}
-            width={this.props.width ? this.props.width : 24}
+            height={height ? height : 24}
+            width={width ? width : 24}
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg">
             <path
               opacity="0.73"
               fillRule="evenodd"
               clipRule="evenodd"
-              fill={this.props.color ? this.props.color : '#D0D7DD'}
+              fill={color ? color : '#D0D7DD'}
               d="M3.032,14.5C1.633,14.5,0.5,13.381,0.5,12
             s1.133-2.5,2.532-2.5c1.397,0,2.532,1.119,2.532,2.5S4.43,14.5,3.032,14.5z M12,14.5c-1.39,0-2.516-1.119-2.516-2.5
             S10.61,9.5,12,9.5s2.516,1.119,2.516,2.5S13.39,14.5,12,14.5z M20.968,14.5c-1.397,0-2.532-1.119-2.532-2.5s1.135-2.5,2.532-2.5
@@ -575,14 +561,14 @@ class Icon extends React.Component {
       delete: () => {
         return (
           <svg
-            height={this.props.height ? this.props.height : 14}
-            width={this.props.width ? this.props.width : 14}
+            height={height ? height : 14}
+            width={width ? width : 14}
             viewBox="0 0 12 12"
             xmlns="http://www.w3.org/2000/svg">
             <g>
               <polyline
                 fill="none"
-                stroke={this.props.color ? this.props.color : '#4192ec'}
+                stroke={color ? color : '#4192ec'}
                 strokeLinejoin="round"
                 strokeMiterlimit="10"
                 points="2.591,2.927 2.591,11.107 
@@ -591,7 +577,7 @@ class Icon extends React.Component {
               <g>
                 <line
                   fill="none"
-                  stroke={this.props.color ? this.props.color : '#4192ec'}
+                  stroke={color ? color : '#4192ec'}
                   strokeLinecap="round"
                   strokeMiterlimit="10"
                   x1="4.938"
@@ -601,7 +587,7 @@ class Icon extends React.Component {
                 />
                 <line
                   fill="none"
-                  stroke={this.props.color ? this.props.color : '#4192ec'}
+                  stroke={color ? color : '#4192ec'}
                   strokeLinecap="round"
                   strokeMiterlimit="10"
                   x1="7.062"
@@ -613,7 +599,7 @@ class Icon extends React.Component {
 
               <line
                 fill="none"
-                stroke={this.props.color ? this.props.color : '#4192ec'}
+                stroke={color ? color : '#4192ec'}
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeMiterlimit="10"
@@ -624,7 +610,7 @@ class Icon extends React.Component {
               />
               <polyline
                 fill="none"
-                stroke={this.props.color ? this.props.color : '#4192ec'}
+                stroke={color ? color : '#4192ec'}
                 strokeLinejoin="round"
                 strokeMiterlimit="10"
                 points="3.588,2.515 3.588,0.892 
@@ -637,12 +623,12 @@ class Icon extends React.Component {
       github: () => {
         return (
           <svg
-            height={this.props.height ? this.props.height : 16}
-            width={this.props.width ? this.props.width : 13}
+            height={height ? height : 16}
+            width={width ? width : 13}
             viewBox="0 0 13 16"
             xmlns="http://www.w3.org/2000/svg">
             <path
-              fill={this.props.color ? this.props.color : '#1B1F23'}
+              fill={color ? color : '#1B1F23'}
               d="M9.192,16H7.215H5.237c0,0,0.005-1.265,0-2.135c-2.708,0.63-3.464-1.6-3.464-1.6
             c-0.495-1.065-0.99-1.6-0.99-1.6c-0.989-0.634,0-0.532,0-0.532c0.99,0,1.484,1.066,1.484,1.066c0.869,1.59,2.414,1.333,2.969,1.065
             c0-0.532,0.217-1.339,0.495-1.6C3.57,10.405,1.771,9.067,1.771,6.4s0.496-3.2,0.991-3.733C2.663,2.404,2.248,1.433,2.778,0
@@ -656,30 +642,30 @@ class Icon extends React.Component {
       google: () => {
         return (
           <svg
-            height={this.props.height ? this.props.height : 16}
-            width={this.props.width ? this.props.width : 16}
+            height={height ? height : 16}
+            width={width ? width : 16}
             viewBox="0 0 16 16"
             xmlns="http://www.w3.org/2000/svg">
             <g>
               <path
-                fill={this.props.color ? this.props.color : '#EA4335'}
+                fill={color ? color : '#EA4335'}
                 d="M5.5,0.423C7.256-0.15,9.225-0.15,10.979,0.475c0.959,0.364,1.864,0.884,2.608,1.613
               c-0.267,0.26-0.53,0.52-0.798,0.781c-0.479,0.468-1.01,0.988-1.489,1.456c-0.479-0.468-1.116-0.832-1.757-0.988
               C8.802,3.128,7.948,3.076,7.15,3.232C6.246,3.44,5.394,3.909,4.702,4.533C4.17,5.054,3.745,5.73,3.532,6.406
               C2.627,5.73,1.776,5.054,0.872,4.377C1.829,2.556,3.532,1.1,5.5,0.423"
               />
               <path
-                fill={this.props.color ? this.props.color : '#FBBC05'}
+                fill={color ? color : '#FBBC05'}
                 d="M0.179,6.406c0.16-0.676,0.373-1.353,0.692-2.029C1.775,5.054,2.627,5.73,3.532,6.406
               c-0.373,0.988-0.373,2.081,0,3.121c-0.905,0.678-1.756,1.353-2.661,2.029C0.073,9.943-0.193,8.123,0.179,6.406"
               />
               <path
-                fill={this.props.color ? this.props.color : '#4285F4'}
+                fill={color ? color : '#4285F4'}
                 d="M8.161,6.458h7.663c0.265,1.404,0.212,2.862-0.215,4.214c-0.373,1.25-1.062,2.393-2.074,3.33
               c-0.852-0.678-1.702-1.301-2.605-1.979c0.852-0.571,1.436-1.455,1.648-2.444H8.161V6.458z"
               />
               <path
-                fill={this.props.color ? this.props.color : '#34A853'}
+                fill={color ? color : '#34A853'}
                 d="M0.871,11.559c0.904-0.678,1.756-1.353,2.661-2.029c0.319,0.986,1.011,1.873,1.862,2.445
                 c0.532,0.363,1.171,0.623,1.809,0.78c0.638,0.103,1.277,0.103,1.97,0c0.638-0.104,1.275-0.364,1.808-0.678
                 c0.854,0.678,1.705,1.302,2.607,1.978c-0.957,0.832-2.074,1.405-3.352,1.717c-1.384,0.313-2.821,0.313-4.15-0.051
@@ -692,12 +678,12 @@ class Icon extends React.Component {
       information: () => {
         return (
           <svg
-            height={this.props.height ? this.props.height : 14}
-            width={this.props.width ? this.props.width : 14}
+            height={height ? height : 14}
+            width={width ? width : 14}
             viewBox="0 0 14 14"
             xmlns="http://www.w3.org/2000/svg">
             <path
-              fill={this.props.color ? this.props.color : '#4DA1FF'}
+              fill={color ? color : '#4DA1FF'}
               className="st0"
               d="M7,0C3.1,0,0,3.1,0,7s3.1,7,7,7s7-3.1,7-7S10.9,0,7,0z M7,13c-3.3,0-6-2.7-6-6s2.7-6,6-6s6,2.7,6,6
 	S10.3,13,7,13z M8.2,4.3c0,0.5-0.4,0.8-0.8,0.8c-0.5,0-0.8-0.4-0.8-0.8c0-0.5,0.4-0.8,0.8-0.8C7.8,3.5,8.2,3.9,8.2,4.3z M7,9.3
@@ -706,10 +692,216 @@ class Icon extends React.Component {
           </svg>
         )
       },
+      bell: () => {
+        return (
+          <svg
+            version="1.1"
+            height={height ? height : 24}
+            width={width ? width : 24}
+            id="Layer_1"
+            x="0px"
+            y="0px"
+            viewBox="0 0 24 24"
+            enableBackground="new 0 0 24 24">
+            <path
+              fill={color ? color : '#4DA1FF'}
+              d="M20.1,17H3.9c1.6-1.3,2.8-1.9,2.8-6.6c0-4.1,2.2-5.5,4.3-5.8c0,0,0,0,0-0.1c0-0.5,0.4-0.9,1-0.9s1,0.4,1,0.9c0,0,0,0,0,0.1
+	c2.1,0.3,4.3,1.7,4.3,5.8C17.3,15.1,18.5,15.7,20.1,17z M12,19.7c1.1,0,2-0.8,2.2-1.8H9.8C9.9,18.9,10.9,19.7,12,19.7"
+            />
+          </svg>
+        )
+      },
+      buySale: () => {
+        return (
+          <svg
+            version="1.1"
+            id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            viewBox="0 0 24 24"
+            enableBackground="new 0 0 24 24"
+            height={height ? height : 24}
+            width={width ? width : 24}>
+            <path
+              fillRule="evenodd"
+              clipRule="evenodd"
+              fill={color ? color : '#4DA1FF'}
+              d="M15.6,7.7V7c0-2-1.6-3.6-3.6-3.6S8.4,5,8.4,7v0.7H5.5v10.8
+	c0,1.2,1,2.2,2.2,2.2h8.6c1.2,0,2.2-1,2.2-2.2V7.7H15.6z M9.8,7c0-1.2,1-2.2,2.2-2.2s2.2,1,2.2,2.2v0.7H9.8V7z M14.2,9.1
+	c0,1.2-1,2.2-2.2,2.2s-2.2-1-2.2-2.2H14.2z M17,18.5c0,0.4-0.3,0.7-0.7,0.7H7.7c-0.4,0-0.7-0.3-0.7-0.7V9.1h1.4c0,2,1.6,3.6,3.6,3.6
+	s3.6-1.6,3.6-3.6H17V18.5z"
+            />
+          </svg>
+        )
+      },
+      camera: () => {
+        return (
+          <svg
+            version="1.1"
+            id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            height={height ? height : 24}
+            width={width ? width : 24}
+            viewBox="0 0 24 24"
+            enableBackground="new 0 0 24 24">
+            <path
+              fill={color ? color : '#4DA1FF'}
+              d="M10,7.3H14c0.2,0,0.4-0.2,0.4-0.4c0-0.2-0.2-0.4-0.4-0.4H10c-0.2,0-0.4,0.2-0.4,0.4C9.5,7.2,9.7,7.3,10,7.3 M12,10.4
+	c-1.4,0-2.5,1-2.5,2.3c0,1.3,1.1,2.3,2.5,2.3c1.4,0,2.5-1,2.5-2.3C14.5,11.5,13.4,10.4,12,10.4 M12,14.3c-0.9,0-1.6-0.7-1.6-1.6
+	c0-0.9,0.7-1.6,1.6-1.6s1.6,0.7,1.6,1.6C13.6,13.6,12.9,14.3,12,14.3 M12,8.9c-2.3,0-4.1,1.7-4.1,3.9c0,2.1,1.8,3.9,4.1,3.9
+	s4.1-1.7,4.1-3.9C16.1,10.6,14.3,8.9,12,8.9 M12,15.9c-1.8,0-3.3-1.4-3.3-3.1c0-1.7,1.5-3.1,3.3-3.1c1.8,0,3.3,1.4,3.3,3.1
+	C15.3,14.5,13.8,15.9,12,15.9 M18.1,11.2c-0.2,0-0.4,0.2-0.4,0.4c0,0.2,0.2,0.4,0.4,0.4c0.2,0,0.4-0.2,0.4-0.4
+	C18.5,11.4,18.4,11.2,18.1,11.2 M18.1,8.1c-0.7,0-1.2,0.5-1.2,1.2c0,0.6,0.5,1.2,1.2,1.2s1.2-0.5,1.2-1.2
+	C19.4,8.6,18.8,8.1,18.1,8.1 M18.1,9.7c-0.2,0-0.4-0.2-0.4-0.4c0-0.2,0.2-0.4,0.4-0.4c0.2,0,0.4,0.2,0.4,0.4
+	C18.5,9.5,18.4,9.7,18.1,9.7 M19.4,6.6h-1.6c-1.2,0-1.2-1.6-2.9-1.6H12H9.1C7.5,5,7.5,6.6,6.3,6.6H4.6C3.7,6.6,3,7.3,3,8.1v9.3
+	C3,18.3,3.7,19,4.6,19h14.7c0.9,0,1.6-0.7,1.6-1.6V8.1C21,7.3,20.3,6.6,19.4,6.6 M20.2,14.3h-3.6c-0.1,0.3-0.2,0.5-0.4,0.8h3.9v2.3
+	c0,0.4-0.4,0.8-0.8,0.8H4.6c-0.5,0-0.8-0.3-0.8-0.8v-2.3h3.9c-0.2-0.2-0.3-0.5-0.4-0.8H3.8V8.1c0-0.4,0.4-0.8,0.8-0.8h1.6
+	c1.6,0,1.6-1.6,2.9-1.6H12h2.9c1.2,0,1.2,1.6,2.9,1.6h1.6c0.5,0,0.8,0.3,0.8,0.8V14.3z"
+            />
+          </svg>
+        )
+      },
+      deleteBox: () => {
+        return (
+          <svg
+            version="1.1"
+            id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            height={height ? height : 24}
+            width={width ? width : 24}
+            viewBox="0 0 24 24"
+            enableBackground="new 0 0 24 24">
+            <path
+              fill={color ? color : '#4DA1FF'}
+              fillRule="evenodd"
+              clipRule="evenodd"
+              d="M19.8,6.3h-3.5V5.5c0-1.5-1.2-2.6-2.6-2.6h-3.5C8.8,2.9,7.7,4,7.7,5.5v0.9H4.2
+	c-0.5,0-0.9,0.4-0.9,0.9c0,0.5,0.4,0.9,0.9,0.9h1C5.1,8.3,5,8.6,5,9v9.6c0,1.5,1.2,2.6,2.6,2.6h8.7c1.4,0,2.6-1.2,2.6-2.6V9
+	c0-0.3-0.1-0.6-0.2-0.9h1c0.5,0,0.9-0.4,0.9-0.9C20.7,6.7,20.3,6.3,19.8,6.3z M9.4,5.5c0-0.5,0.4-0.9,0.9-0.9h3.5
+	c0.5,0,0.9,0.4,0.9,0.9v0.9H9.4V5.5z M17.2,18.5c0,0.5-0.4,0.9-0.9,0.9H7.7c-0.5,0-0.9-0.4-0.9-0.9V8.1h10.4V18.5z"
+            />
+          </svg>
+        )
+      },
+      archive: () => {
+        return (
+          <svg
+            version="1.1"
+            id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            height={height ? height : 24}
+            width={width ? width : 24}
+            viewBox="0 0 24 24"
+            enableBackground="new 0 0 24 24">
+            <path
+              fill={color ? color : '#4DA1FF'}
+              fillRule="evenodd"
+              clipRule="evenodd"
+              d="M21,12.1l-9,4.4l-9-4.4v-1.5l9,4.4l9-4.4V12.1z M21,14.3l-9,4.5l-9-4.4v1.5l9,4.4
+	l9-4.5V14.3z M12,3.8L3,8.2l9,4.5l9-4.5L12,3.8z"
+            />
+          </svg>
+        )
+      },
+      attachment: () => {
+        return (
+          <svg
+            version="1.1"
+            id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            height={height ? height : 24}
+            width={width ? width : 24}
+            viewBox="0 0 24 24"
+            enableBackground="new 0 0 24 24">
+            <path
+              fill={color ? color : '#4DA1FF'}
+              d="M16.6,7.6l-0.2,7.8c0,2.5-2.1,4.5-4.6,4.5s-4.5-2.1-4.5-4.6L7.6,4.8c0-0.4,0.3-0.6,0.6-0.6c0.4,0,0.6,0.3,0.6,0.6L8.6,15.1
+	c0,1.8,1.4,3.3,3.2,3.3s3.3-1.4,3.3-3.2l0.2-7.8c0-1.1-0.8-2-1.9-2s-2,0.8-2,1.9l-0.1,7.8c0,0.4,0.3,0.6,0.6,0.6
+	c0.4,0,0.6-0.3,0.6-0.6l0.1-6.5c0-0.4,0.3-0.6,0.6-0.6c0.4,0,0.6,0.3,0.6,0.6l-0.1,6.5c0,1.1-0.9,1.9-2,1.9s-1.9-0.9-1.9-2L10,7.2
+	C10,5.4,11.5,4,13.3,4C15.2,4.3,16.6,5.8,16.6,7.6z"
+            />
+          </svg>
+        )
+      },
+      support: () => {
+        return (
+          <svg
+            version="1.1"
+            id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            height={height ? height : 24}
+            width={width ? width : 24}
+            viewBox="0 0 24 24"
+            enableBackground="new 0 0 24 24">
+            <path
+              fill={color ? color : '#4DA1FF'}
+              d="M6.5,20.6v-4.1c-1.5,0-2.8-1.2-2.8-2.8V6.1c0-1.5,1.2-2.8,2.8-2.8h11.1c1.5,0,2.8,1.2,2.8,2.8v7.6c0,1.5-1.2,2.8-2.8,2.8
+	h-5.4L6.5,20.6z M6.5,4.8c-0.8,0-1.4,0.6-1.4,1.4v7.6c0,0.8,0.6,1.4,1.4,1.4h1.4V18l3.8-2.8h5.8c0.8,0,1.4-0.6,1.4-1.4V6.1
+	c0-0.8-0.6-1.4-1.4-1.4h-11V4.8z"
+            />
+          </svg>
+        )
+      },
+      transactions: () => {
+        return (
+          <svg
+            version="1.1"
+            id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            height={height ? height : 24}
+            width={width ? width : 24}
+            viewBox="0 0 24 24"
+            enableBackground="new 0 0 24 24">
+            <path
+              fill={color ? color : '#4DA1FF'}
+              fillRule="evenodd"
+              clipRule="evenodd"
+              d="M21.9,18.3v0.9h-1.8v-0.9c0-3.5-2.8-6.3-6.3-6.3H5.1L9.1,16c0.3,0.3,0.3,0.9,0,1.3
+	c-0.3,0.4-0.9,0.4-1.3,0l-5.5-5.5c-0.4-0.4-0.4-0.9,0-1.3L7.8,5c0.4-0.4,0.9-0.4,1.3,0c0.3,0.3,0.3,0.9,0,1.3l-3.9,3.9h8.7
+	C18.3,10.2,21.9,13.9,21.9,18.3z"
+            />
+          </svg>
+        )
+      },
+      wallet: () => {
+        return (
+          <svg
+            version="1.1"
+            id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            viewBox="0 0 24 24"
+            height={height ? height : 24}
+            width={width ? width : 24}
+            enableBackground="new 0 0 24 24">
+            <path
+              fill={color ? color : '#4DA1FF'}
+              d="M18.4,20.1H5.6c-0.9,0-1.7-0.8-1.7-1.7V9.9c0-0.9,0.8-1.7,1.7-1.7V5.6c0-0.9,0.8-1.7,1.7-1.7l11.1,4.3
+	c0.9,0,1.7,0.8,1.7,1.7v8.6C20.1,19.4,19.4,20.1,18.4,20.1z M8.1,5.8c-0.5,0-0.9,0.4-0.9,0.9v1.5h6.9L8.1,5.8z M18.4,10.7
+	c0-0.5-0.4-0.9-0.9-0.9H6.4c-0.5,0-0.9,0.4-0.9,0.9v6.9c0,0.5,0.4,0.9,0.9,0.9h11.1c0.5,0,0.9-0.4,0.9-0.9V10.7z M8.6,15H7.7
+	c-0.2,0-0.4-0.2-0.4-0.4v-0.9c0-0.2,0.2-0.4,0.4-0.4h0.9c0.2,0,0.4,0.2,0.4,0.4v0.9C9,14.8,8.8,15,8.6,15z"
+            />
+          </svg>
+        )
+      },
       default: () => {
         return (
           <svg
-            fill={this.props.color ? this.props.color : '#cccccc'}
+            fill={color ? color : '#cccccc'}
             height="24"
             viewBox="0 0 24 24"
             width="24"
@@ -720,7 +912,7 @@ class Icon extends React.Component {
         )
       }
     }
-    return svg[this.props.icon || 'default']()
+    return svg[icon || 'default']()
   }
 }
 
