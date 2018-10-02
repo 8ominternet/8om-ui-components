@@ -10,7 +10,7 @@ const ButtonWrapper = styled.button`
   user-select: none;
   line-height: 1.5;
   position: relative;
-  border-radius: 2px;
+  border-radius: ${props => (props.borderRadius ? props.borderRadius : '2px')};
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
     box-shadow 0.15s ease-in-out;
   outline: none;
@@ -18,8 +18,8 @@ const ButtonWrapper = styled.button`
   height: 38px;
   background-color: ${props => (props.backgroundColor ? props.backgroundColor : '#4da1ff')};
   color: ${props => (props.color ? props.color : '#ffffff')};
-  border: none;
-  box-shadow: 0px 2px 8px -2px rgba(0, 0, 0, 0.4);
+  border: ${props => (props.border ? props.border : 'none')};
+  box-shadow: ${props => (props.shadow ? props.shadow : '0px 2px 8px -2px rgba(0, 0, 0, 0.4)')};
   width: ${props => {
     switch (props.size) {
       case 'medium':
@@ -87,9 +87,9 @@ class Button extends React.Component {
   }
 
   render() {
-    const { isLoading, label, loadingBgColor, loadingFgColor, ...props } = this.props
+    const { isLoading, label, border, loadingBgColor, loadingFgColor, ...props } = this.props
     return (
-      <ButtonWrapper {...props} isLoading={isLoading}>
+      <ButtonWrapper border={border} {...props} isLoading={isLoading}>
         {isLoading ? <Circle loadingBgColor={loadingBgColor} loadingFgColor={loadingFgColor} /> : label}
       </ButtonWrapper>
     )

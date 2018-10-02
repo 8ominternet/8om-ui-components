@@ -21,14 +21,19 @@ const ActiveButton = styled.div`
   justify-content: center;
   border-radius: 17px;
   outline: none;
-  background-color: ${props => (props.selected ? '#4da1ff' : '#ffffff')};
-  color: ${props => (props.selected ? '#ffffff' : '#9b9b9b')};
+  background-color: ${props => (props.selected ? props.activeColor : '#ffffff')};
+  color: ${props => (props.selected ? props.textColor : '#9b9b9b')};
 `
 class Switcher extends Component {
   render() {
-    const { data, selected, onClick } = this.props
+    const { data, activeColor = '#4da1ff', textColor = '#fff', selected, onClick } = this.props
     const items = data.map((item, key) => (
-      <ActiveButton key={key} onClick={onClick ? () => onClick(item) : () => null} selected={selected === item}>
+      <ActiveButton
+        key={key}
+        onClick={onClick ? () => onClick(item) : () => null}
+        activeColor={activeColor}
+        textColor={textColor}
+        selected={selected === item}>
         {item}
       </ActiveButton>
     ))

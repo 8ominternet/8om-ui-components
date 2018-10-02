@@ -31,8 +31,15 @@ setAddon(JSXAddon)
 stories.add('Example', () => (
   <Div>
     <Title>Default</Title>
-    <Switcher data={['Monthly', 'Annual']} selected={'Monthly'} onClick={e => console.log(e)} />
-    <Code>{`<Switcher data={['Monthly', 'Annual']} selected="Monthly" onClick={e => console.log(e)} />`}</Code>
+    <Switcher
+      data={['Monthly', 'Annual']}
+      activeColor={'red'}
+      textColor={'#fff'}
+      selected={'Monthly'}
+      onClick={e => console.log(e)}
+    />
+    <Code>{`<Switcher data={['Monthly', 'Annual']} activeColor={'red'}
+    textColor={'#fff'} selected="Monthly" onClick={e => console.log(e)} />`}</Code>
   </Div>
 ))
 

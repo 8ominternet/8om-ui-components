@@ -44,6 +44,24 @@ stories
       <Button backgroundColor="red" />
       <Code>{`<Button backgroundColor="red" />`}</Code>
 
+      <Title>With border</Title>
+      <Button border={'2px solid #4da1ff'} backgroundColor="transparent" color="#4da1ff" />
+      <Code>{`<Button border={'2px solid #4da1ff'} backgroundColor="transparent" color="#4da1ff" />`}</Code>
+
+      <Title>With border radius</Title>
+      <Button border={'2px solid #4da1ff'} backgroundColor="transparent" color="#4da1ff" borderRadius={'8px'} />
+      <Code>{`<Button border={'2px solid #4da1ff'} backgroundColor="transparent" color="#4da1ff" borderRadius={'8px'}  />`}</Code>
+
+      <Title>No shadow</Title>
+      <Button
+        border={'2px solid #4da1ff'}
+        backgroundColor="transparent"
+        color="#4da1ff"
+        borderRadius={'8px'}
+        shadow="none"
+      />
+      <Code>{`<Button border={'2px solid #4da1ff'} backgroundColor="transparent" color="#4da1ff" borderRadius={'8px'} shadow="none" />`}</Code>
+
       <Title>Background Color on Hover</Title>
       <Button backgroundColorOnHover="red" />
       <Code>{`<Button backgroundColorOnHover="red" />`}</Code>
@@ -72,6 +90,9 @@ stories
       size={select('size', { small: 'small', medium: 'medium', large: 'large' }, 'small')}
       backgroundColor={color('backgroundColor', '#4da1ff')}
       color={color('color', '#ffffff')}
+      border={text('border', '2px solid #4da1ff')}
+      borderRadius={text('borderRadius', '8px')}
+      shadow={text('shadow', 'none')}
       backgroundColorOnHover={color('backgroundColorOnHover', '#3c95f9')}
       colorOnHover={color('colorOnHover', '#ffffff')}
       isLoading={boolean('isLoading', false)}
