@@ -15,10 +15,10 @@ const StyledInput = styled.input`
   z-index: 9;
   cursor: pointer;
   &:checked + label {
-    background-color: #4192ec;
-    border-color: #4192ec;
+    background-color: ${props => (props.color ? props.color : '#4192ec')};
+    border-color: ${props => (props.color ? props.color : '#4192ec')};
     &:before {
-      border-color: #fff;
+      border-color: ${props => (props.tickColor ? props.tickColor : '#fff')};
     }
   }
 `

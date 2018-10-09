@@ -31,8 +31,16 @@ stories.add('Example', () => (
     <Code>{`<Checkbox />`}</Code>
 
     <Title>Default Checked</Title>
-    <Checkbox defaultChecked={true} />
+    <Checkbox defaultChecked={true} label="saurav" />
     <Code>{`<Checkbox defaultChecked />`}</Code>
+
+    <Title>Change color</Title>
+    <Checkbox defaultChecked={true} color="#f50057" />
+    <Code>{`<Checkbox defaultChecked color="#f50057"/>`}</Code>
+
+    <Title>Change tick color</Title>
+    <Checkbox defaultChecked={true} color="#00bcd4" tickColor="#e91e63" />
+    <Code>{`<Checkbox defaultChecked color="#00bcd4" tickColor="#e91e63"/>`}</Code>
 
     <Title>Circle Checkbox</Title>
     <Checkbox circle />
@@ -44,7 +52,8 @@ stories.addWithJSX('Playground', () => (
   <Div>
     <Checkbox
       label={text('label', 'Gender')}
-      activeColor={color('activeColor', '#4da1ff')}
+      color={color('color', '#4da1ff')}
+      tickColor={color('tickColor', '#fff')}
       labelStyle={object('labelStyle', { color: '#4da1ff' })}
     />
   </Div>
