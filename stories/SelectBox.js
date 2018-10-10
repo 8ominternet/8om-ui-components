@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { setAddon, storiesOf } from '@storybook/react'
-import { boolean, text, object, withKnobs } from '@storybook/addon-knobs/react'
+import { boolean, text, object, withKnobs, color } from '@storybook/addon-knobs/react'
 import JSXAddon from 'storybook-addon-jsx'
 import { SelectBox } from '../src/SelectBox'
 const Div = styled.div`
@@ -30,7 +30,11 @@ stories.add('Example', () => (
     <SelectBox value={{ value: '1' }} />
     <Code>{`<SelectBox  />`}</Code>
 
-    <Title>Disabled</Title>
+    <Title>Default</Title>
+    <SelectBox value={{ value: '1' }} focusColor={'tomato'} />
+    <Code>{`<SelectBox  focusColor={'tomato'}/>`}</Code>
+
+    <Title>Change focus color</Title>
     <SelectBox disabled />
     <Code>{`<SelectBox disabled />`}</Code>
 
@@ -64,6 +68,7 @@ stories.addWithJSX('Playground', () => (
       label={text('label', 'INPUT FIELD')}
       disabled={boolean('disabled', false)}
       labelStyle={object('labelStyle', { color: '#323c47' })}
+      focusColor={color('focusColor', { color: '#85B325' })}
     />
   </Div>
 ))

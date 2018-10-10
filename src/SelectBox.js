@@ -27,10 +27,10 @@ const SelectWrapper = styled.div`
   }
   & .Select.is-focused:not(.is-open) > .Select-control {
     box-shadow: none;
-    border-color: #4da1ff;
+    border-color: ${props => (props.focusColor ? props.focusColor : '#4da1ff')};
   }
   & .Select.is-open > .Select-control {
-    border-color: #4da1ff;
+    border-color: ${props => (props.focusColor ? props.focusColor : '#4da1ff')};
   }
   & .Select.is-disabled > .Select-control {
     background-color: #f4f8f9;
@@ -56,7 +56,7 @@ const SelectWrapper = styled.div`
   }
   & .Select.is-open > .Select-control .Select-arrow-zone,
   .Select.is-focused:not(.is-open) > .Select-control .Select-arrow-zone {
-    background-color: #4192ec;
+    background-color: ${props => (props.focusColor ? props.focusColor : '#4192ec')};
     & .Select-arrow {
       border-color: #fff;
     }
@@ -145,8 +145,8 @@ const SelectWrapper = styled.div`
       border:none;
     }
     & .Select-option.is-selected{
-      background-color: #4da1ff !important;
-      border: solid 1px #4da1ff !important;
+      background-color: ${props => (props.focusColor ? props.focusColor : '#4da1ff')} !important;
+      border: solid 1px ${props => (props.focusColor ? props.focusColor : '#4da1ff')} !important;
       color:#fff !important;
     }
   `};
@@ -162,9 +162,9 @@ const Label = styled.p`
 
 class SelectBox extends React.Component {
   render() {
-    const { labelStyle, customOptions, placeholderColor, width, label, ...props } = this.props
+    const { labelStyle, customOptions, placeholderColor, width, label, focusColor, ...props } = this.props
     return (
-      <SelectWrapper width={width} customOptions={customOptions}>
+      <SelectWrapper width={width} customOptions={customOptions} focusColor={focusColor}>
         {label && <Label style={labelStyle && labelStyle}>{label}</Label>}
         <Select clearable={customOptions ? true : false} {...props} />
       </SelectWrapper>

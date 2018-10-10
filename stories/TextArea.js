@@ -26,6 +26,10 @@ stories.add('Example', () => (
     <TextArea />
     <Code>{`<TextArea  />`}</Code>
 
+    <Title>No Resize</Title>
+    <TextArea noResize />
+    <Code>{`<TextArea  noResize />`}</Code>
+
     <Title>Disabled</Title>
     <TextArea disabled />
     <Code>{`<TextArea disabled />`}</Code>

@@ -15,7 +15,7 @@ const StyledTextArea = styled.textarea`
   letter-spacing: 0.2px;
   box-sizing: border-box;
   color: #323c47;
-  resize: vertical;
+  resize: ${props => (props.noResize ? 'none' : 'vertical')};
   &:focus {
     border-color: #4da1ff;
   }
@@ -72,7 +72,7 @@ const Label = styled.p`
 
 class TextArea extends React.Component {
   render() {
-    const { labelStyle, disabled, placeholderColor, label, ...props } = this.props
+    const { labelStyle, disabled, placeholderColor, label, noResize, ...props } = this.props
     return (
       <TextAreaWrapper>
         {label && (
@@ -81,6 +81,7 @@ class TextArea extends React.Component {
           </Label>
         )}
         <StyledTextArea
+          noResize={noResize}
           placeholderColor={placeholderColor && placeholderColor}
           disabled={disabled}
           rows="3"

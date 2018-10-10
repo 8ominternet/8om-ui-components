@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { setAddon, storiesOf } from '@storybook/react'
-import { boolean, text, select, object, color, withKnobs } from '@storybook/addon-knobs/react'
+import { boolean, text, object, color, withKnobs } from '@storybook/addon-knobs/react'
 import JSXAddon from 'storybook-addon-jsx'
 import { Checkbox } from '../src/Checkbox'
 
@@ -27,34 +27,34 @@ setAddon(JSXAddon)
 stories.add('Example', () => (
   <Div>
     <Title>Default</Title>
-    <Checkbox />
+    <Checkbox label="Hi! i'm a checkbox" />
     <Code>{`<Checkbox />`}</Code>
-
     <Title>Default Checked</Title>
-    <Checkbox defaultChecked={true} label="saurav" />
-    <Code>{`<Checkbox defaultChecked />`}</Code>
-
+    <Checkbox label="Hi! i'm a checkbox" />
+    <Code>{`<Checkbox />`}</Code>
+    <Title>Style Label</Title>
+    <Checkbox label="Hi! i'm a checkbox" labelStyle={'tomato'} />
+    <Code>{`<Checkbox />`}</Code>
+    <Title>Flip Label</Title>
+    <Checkbox label="Hi! i'm a checkbox" flip />
+    <Code>{`<Checkbox flip={true}/>`}</Code>
     <Title>Change color</Title>
-    <Checkbox defaultChecked={true} color="#f50057" />
+    <Checkbox defaultChecked={true} label="Hi! i'm a checkbox" color="#f50057" />
     <Code>{`<Checkbox defaultChecked color="#f50057"/>`}</Code>
-
     <Title>Change tick color</Title>
-    <Checkbox defaultChecked={true} color="#00bcd4" tickColor="#e91e63" />
-    <Code>{`<Checkbox defaultChecked color="#00bcd4" tickColor="#e91e63"/>`}</Code>
-
-    <Title>Circle Checkbox</Title>
-    <Checkbox circle />
-    <Code>{`<Checkbox circle />`}</Code>
+    <Checkbox defaultChecked={true} label="Hi! i'm a checkbox" color="#00bcd4" tickColor="#e91e63" />
+    <Code>{`<Checkbox defaultChecked color="#00bcd4" tickColor="#e91e63"/>`}</Code>.
   </Div>
 ))
 
 stories.addWithJSX('Playground', () => (
   <Div>
     <Checkbox
-      label={text('label', 'Gender')}
+      label={text('label', `Hi! i'm a checkbox`)}
       color={color('color', '#4da1ff')}
       tickColor={color('tickColor', '#fff')}
       labelStyle={object('labelStyle', { color: '#4da1ff' })}
+      flip={boolean('flip', true)}
     />
   </Div>
 ))
