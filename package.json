@@ -11,7 +11,6 @@
     "umd"
   ],
   "scripts": {
-    "precommit": "lint-staged",
     "build": "nwb build-react-component",
     "clean": "nwb clean-module && nwb clean-demo",
     "start": "nwb serve-react-demo",
