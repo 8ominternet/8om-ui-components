@@ -158,6 +158,18 @@ stories.add('Example', () => (
       <p>
         <Icon icon={'wallet'} /> wallet
       </p>
+      <p>
+        <Icon icon={'union'} /> union
+      </p>
+      <p>
+        <Icon icon={'backArrow'} /> backArrow
+      </p>
+      <p>
+        <Icon icon={'share'} /> share
+      </p>
+      <p>
+        <Icon icon={'verticalMeatball'} /> verticalMeatball
+      </p>
     </IconGroup>
   </Div>
 ))

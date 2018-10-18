@@ -885,8 +885,8 @@ class Icon extends React.Component {
             x="0px"
             y="0px"
             viewBox="0 0 24 24"
-            height={height ? height : 24}
             width={width ? width : 24}
+            height={height ? height : 24}
             enableBackground="new 0 0 24 24">
             <path
               fill={color ? color : '#4DA1FF'}
@@ -896,6 +896,60 @@ class Icon extends React.Component {
 	c-0.2,0-0.4-0.2-0.4-0.4v-0.9c0-0.2,0.2-0.4,0.4-0.4h0.9c0.2,0,0.4,0.2,0.4,0.4v0.9C9,14.8,8.8,15,8.6,15z"
             />
           </svg>
+        )
+      },
+      union: () => {
+        return (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width={width ? width : 16}
+            height={height ? height : 14}
+            viewBox="0 0 16 14">
+            <path
+              id="Union_8"
+              d="M0 14v-2h8v2zm0-6V6h16v2zm0-6V0h16v2z"
+              fill={color ? color : '#4DA1FF'}
+              data-name="Union 8"
+            />
+          </svg>
+        )
+      },
+      backArrow: () => {
+        return (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width={width ? width : 15.397}
+            height={height ? height : 15.397}
+            viewBox="0 0 15.397 15.397">
+            <path
+              id="Shape"
+              d="M15.4 6.736H3.657l5.389-5.389L7.7 0 0 7.7l7.7 7.7 1.346-1.35-5.389-5.389H15.4V6.736z"
+              fill={color ? color : '#4DA1FF'}
+            />
+          </svg>
+        )
+      },
+      share: () => {
+        return (
+          <svg xmlns="http://www.w3.org/2000/svg" id="share" width={width ? width : 17.659}
+          height={height ? height : 17.659} viewBox="0 0 17.659 17.659">
+    
+    <path id="bounds" d="M0 0h17.659v17.659H0z" fill="none"/>
+    <path id="Shape" d="M11.037 10.4a2.138 2.138 0 0 0-1.442.569L4.349 7.9a2.428 2.428 0 0 0 .066-.517 2.428 2.428 0 0 0-.066-.517l5.187-3.032a2.2 2.2 0 0 0 3.708-1.618 2.207 2.207 0 1 0-4.415 0 2.428 2.428 0 0 0 .066.517L3.708 5.77a2.216 2.216 0 1 0 0 3.236l5.239 3.073a2.092 2.092 0 0 0-.059.48 2.149 2.149 0 1 0 2.149-2.159z" fill={color ? color : '#4DA1FF'} transform="translate(2.207 1.472)"/>
+</svg>
+
+        )
+      },
+      verticalMeatball: () => {
+        return (
+          <svg xmlns="http://www.w3.org/2000/svg" width={width ? width : 12}
+          height={height ? height : 24}  viewBox="0 0 12 24">
+    
+    <g id="more_1_" transform="translate(-332 -16.167)">
+        <path id="Shape_4_" d="M-2 16a2 2 0 0 0 2-2 2 2 0 0 0-2-2 2 2 0 0 0-2 2 2 2 0 0 0 2 2zm0-6a2 2 0 0 0 2-2 2 2 0 0 0-2-2 2 2 0 0 0-2 2 2 2 0 0 0 2 2zm0-6a2 2 0 0 0 2-2 2 2 0 0 0-2-2 2 2 0 0 0-2 2 2 2 0 0 0 2 2z" fill={color ? color : '#4DA1FF'} transform="rotate(180 168 18.084)"/>
+        <path id="bounds_3_" d="M-12 0H0v24h-12z" fill='none' transform="rotate(180 166 20.084)"/>
+    </g>
+</svg>
         )
       },
       default: () => {

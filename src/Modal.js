@@ -34,6 +34,9 @@ const ModalBox = styled.div`
   border-radius: 2px;
   background-color: #ffffff;
   box-shadow: 0 1px 3px 2px rgba(204, 204, 204, 0.5);
+  @media(max-width: 768px){
+    padding: 24px 16px;
+  }
 `
 const Title = styled.h4`
   font-size: 24px;
