@@ -106,10 +106,12 @@ class ConfirmDialog extends React.Component {
           <Title>{title}</Title>
           <Message>{message}</Message>
           <ButtonWrapper>
-            <ActionButton cancel onClick={() => onCancel(false)}>
+            <ActionButton type={'button'} cancel onClick={() => onCancel(false)}>
               {cancelText}
             </ActionButton>
-            <ActionButton onClick={() => onConfirm(true)}>{confirmText}</ActionButton>
+            <ActionButton type={'button'} onClick={() => onConfirm(true)}>
+              {confirmText}
+            </ActionButton>
           </ButtonWrapper>
         </ConfirmBox>
       </ConfirmWrapper>
