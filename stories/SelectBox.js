@@ -30,11 +30,11 @@ stories.add('Example', () => (
     <SelectBox value={{ value: '1' }} />
     <Code>{`<SelectBox  />`}</Code>
 
-    <Title>Default</Title>
+    <Title>Change focus color</Title>
     <SelectBox value={{ value: '1' }} focusColor={'tomato'} />
     <Code>{`<SelectBox  focusColor={'tomato'}/>`}</Code>
 
-    <Title>Change focus color</Title>
+    <Title>Disabled</Title>
     <SelectBox disabled />
     <Code>{`<SelectBox disabled />`}</Code>
 
